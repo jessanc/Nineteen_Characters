@@ -12,7 +12,14 @@ import src.controller.Entity;
  *
  * @author JohnReedLOL
  */
-public class StatsView implements Viewable
+public class StatsView extends View
 {
+	
     private static final Entity avatar_reference_ = Avatar.getaReferenceToTheAvatar();
+    /**
+     * Generates a new StatsView using the avatar_reference.
+     */
+    public StatsView() {
+    	
+    }
 }

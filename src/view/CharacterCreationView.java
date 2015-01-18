@@ -12,7 +12,15 @@ import src.controller.Entity;
  *
  * @author JohnReedLOL
  */
-public class CharacterCreationView implements Viewable
+public class CharacterCreationView extends View
 {
+	
     private static final Entity avatar_reference_ = Avatar.getaReferenceToTheAvatar();
+    
+    /*
+     * Generates a new CharacterCreationView. Uses avatar_reference_ to modify the avatar.
+     */
+    public CharacterCreationView() {
+    	
+    }
 }
