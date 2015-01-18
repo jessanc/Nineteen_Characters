@@ -14,7 +14,9 @@ import src.model.MapModel;
  */
 abstract public class Entity extends DrawableThing implements Serializable
 {
-
+	// Converts an entity's name [which must be unique] into a unique base 26 number
+	final long serialVersionUID = Long.parseLong(super.name_, 26); 
+	
     private static final MapModel map_model_reference_ = MapModel.getaReferenceToTheMapModel();
 
     Item inventory_[];
@@ -47,7 +49,6 @@ abstract public class Entity extends DrawableThing implements Serializable
 
     private void recalculateStats()
     {
-
     }
 
     public void levelUp()

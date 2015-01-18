@@ -25,4 +25,12 @@ public class Main
         
     }
     
+    static void saveGameToDisk() {
+        
+    }
+    
+    static void resumeGameFromDisk() {
+        
+    }
+    
 }
