@@ -5,7 +5,6 @@
  */
 
 package src.controller;
-import src.DrawableThing;
 /**
  *
  * @author JohnReedLOL
@@ -18,16 +17,25 @@ public class AreaEffectGenerator extends Item
     public void activate() {
         
     }
-    public void hurtWithinRadius(int radius) {
-        
+    
+    //area effects
+    public void hurtWithinRadius(int damage, int radius)
+    {
+
     }
-    public void healWithinRadius(int radius) {
-        
+
+    public void healWithinRadius(int heal_quantity, int radius)
+    {
+
     }
-    public void killWithinRadius(int radius) {
-        
+
+    public void killWithinRadius(boolean will_kill_players, boolean will_kill_npcs, int radius)
+    {
+
     }
-    public void levelWithinRadius(int radius) {
-        
+
+    public void levelWithinRadius(boolean will_level_up_players, boolean will_level_up_npcs, int radius)
+    {
+
     }
 }

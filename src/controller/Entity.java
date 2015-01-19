@@ -5,30 +5,46 @@
  */
 package src.controller;
 
-import src.DrawableThing;
 import src.model.MapModel;
+
 /**
  *
  * @author JohnReedLOL
  */
 abstract public class Entity extends DrawableThing
 {
+
     // Converts an entity's name [which must be unique] into a unique base 35 number
     private static final long serialVersionUID = Long.parseLong("Entity", 35);
+
+    public enum FacingDirection
+    {
+
+        UP, UP_RIGHT, RIGHT, DOWN_RIGHT,
+        DOWN, DOWN_LEFT, LEFT, UP_LEFT
+    }
+    private FacingDirection facing_direction_;
+
+    // height and width values must be odd to be symmetrical with respect to center.
+    private final int height_;
+    private final int width_;
+
+    // For things that take up more than 1 tile on the MapModel
+    private char[][] multi_character_representation_;
 
     Item inventory_[];
 
     //Item weapon; // Worry about helmets, armor, weapons, later.
     //Item armor;
     Item equipped_item_;
-    
+
     private final int max_level_;
 
     private StatsPack stats_;
 
     private void recalculateStats()
     {
-    	stats_.equals(stats_.add(equipped_item_.get_stats_modifiers_()));
+        stats_.equals(stats_.add(equipped_item_.get_stats_modifiers_()));
     }
 
     public void levelUp()
@@ -67,25 +83,4 @@ abstract public class Entity extends DrawableThing
     abstract public void pickUpItem();
 
     abstract public void dropItem();
-
-    //area effects
-    public void areaAttack(int damage, int diameter)
-    {
-
-    }
-
-    public void areaHeal(int heal_quantity, int diameter)
-    {
-
-    }
-
-    public void areaKill(boolean will_kill_players, boolean will_kill_npcs, int diameter)
-    {
-
-    }
-
-    public void areaLevelUp(boolean will_level_up_players, boolean will_level_up_npcs, int diameter)
-    {
-
-    }
 }
