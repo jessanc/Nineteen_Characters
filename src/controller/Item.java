@@ -13,8 +13,13 @@ import java.io.Serializable;
  */
 public class Item extends DrawableThing implements Serializable
 {
-    boolean isEquipable;
-    boolean isOneShot;
+    private boolean isEquipable;
+    private boolean isOneShot;
+    private StatsPack stats_modifiers_;
+    
+    public StatsPack get_stats_modifiers_() {
+        return this.stats_modifiers_;
+    }
     
     public void activate() {
         

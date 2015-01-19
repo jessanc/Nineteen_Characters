@@ -4,9 +4,8 @@
  * and open the template in the editor.
  */
 
-package src.model;
+package src.controller;
 import src.DrawableThing;
-import src.controller.Entity;
 import java.io.Serializable;
 /**
  *

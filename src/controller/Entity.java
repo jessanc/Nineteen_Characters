@@ -14,41 +14,22 @@ import src.model.MapModel;
  */
 abstract public class Entity extends DrawableThing implements Serializable
 {
-	// Converts an entity's name [which must be unique] into a unique base 26 number
-	final long serialVersionUID = Long.parseLong(super.name_, 26); 
-	
-    private static final MapModel map_model_reference_ = MapModel.getaReferenceToTheMapModel();
+    // Converts an entity's name [which must be unique] into a unique base 26 number
+    final long serialVersionUID = Long.parseLong(super.name_, 26); \
 
     Item inventory_[];
 
     //Item weapon; // Worry about helmets, armor, weapons, later.
     //Item armor;
-    Item equipped_item;
+    Item equipped_item_;
+    
+    private final int max_level_;
 
-    // primary stats
-    private int lives_left;
-    private int strength;
-    private int agility;
-    private int intellect;
-    private int hardiness;
-    private int experience;
-    private int movement;
-
-    // max secondary stats
-    private int max_level; // make final 
-    private int max_life; // full hp
-    private int max_mana; // full mana
-
-    // current secondary stats
-    private int current_level;
-    private int current_life;
-    private int current_mana;
-    private int current_offensive_rating;
-    private int current_defensive_rating;
-    private int current_armor_rating;
+    private StatsPack stats_;
 
     private void recalculateStats()
     {
+    	stats_.equals(stats_.add(equipped_item_.get_stats_modifiers_()));
     }
 
     public void levelUp()

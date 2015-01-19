@@ -15,6 +15,8 @@ abstract public class DrawableThing
     // names of items nad terrain should be non-unique.
     // names of entities should be unique to fit in a hashmap.
     public final String name_;
+
+    protected static final MapModel map_model_reference_ = MapModel.getaReferenceToTheMapModel();
     
     private final char representation_;
     private boolean is_viewable_;

@@ -8,6 +8,7 @@ package src.model;
 import java.util.LinkedHashMap;
 import java.io.Serializable;
 import src.view.Display;
+import src.controller.Entity;
 /**
  *
  * @author JohnReedLOL
@@ -19,8 +20,8 @@ public class MapModel implements Serializable
     //2d array of tiles.
     private static MapTile map_grid_[][];
     
-    // String is entity name. Entity name must be unqiue or else bugs will occur.
-    private static LinkedHashMap<String, src.controller.Entity> entities_list_;
+    // String is the entity's name. The entity name must be unqiue or else bugs will occur.
+    private static LinkedHashMap<String, EntityHandle> entities_list_;
     
     // MapModel.map_model_ is static because there is only one map_model_  
     private static MapModel map_model_;

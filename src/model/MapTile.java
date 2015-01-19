@@ -9,6 +9,7 @@ import java.util.LinkedList;
 import java.io.Serializable;
 import src.controller.Entity;
 import src.controller.Item;
+import src.controller.Terrain;
 /**
  *
  * @author JohnReedLOL
