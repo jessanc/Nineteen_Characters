@@ -14,6 +14,8 @@ import src.controller.Entity;
  */
 public class CharacterCreationView extends View
 {
+    // Converts the class name into a base 35 number
+    private static final long serialVersionUID = Long.parseLong("CharacterCreationView", 35);
 	
     private static final Entity avatar_reference_ = Avatar.getaReferenceToTheAvatar();
     

@@ -1,5 +1,5 @@
 package src;
-
+import java.io.Serializable;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,9 +10,12 @@ package src;
  *
  * @author JohnReedLOL
  */
-abstract public class DrawableThing
+abstract public class DrawableThing implements Serializable
 {
-    // names of items nad terrain should be non-unique.
+    // Converts the class name into a base 35 number
+    private static final long serialVersionUID = Long.parseLong("DrawableThing", 35);
+
+    // names of items and terrain should be non-unique.
     // names of entities should be unique to fit in a hashmap.
     public final String name_;
 

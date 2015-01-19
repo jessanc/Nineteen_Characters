@@ -6,15 +6,18 @@
 
 package src.controller;
 import src.DrawableThing;
-import java.io.Serializable;
 /**
  *
  * @author JohnReedLOL
  */
-public class Item extends DrawableThing implements Serializable
+public class Item extends DrawableThing
 {
-    private boolean isEquipable;
-    private boolean isOneShot;
+    // Converts a class name [which must be unique] into a unique base 35 number
+    private static final long serialVersionUID = Long.parseLong("Item", 35);
+
+    private boolean goesInInventory; //assume that you can wear anything that goes in your inventory
+    private boolean isOneShot_;    
+
     private StatsPack stats_modifiers_;
     
     public StatsPack get_stats_modifiers_() {
@@ -24,10 +27,10 @@ public class Item extends DrawableThing implements Serializable
     public void activate() {
         
     }
-    public void activate(Entity entity) {
+    public void use(Entity entity) {
         
     }
-    public void activate(Item item) {
+    public void use(Item item) {
         
     }
     

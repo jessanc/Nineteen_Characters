@@ -5,13 +5,16 @@
  */
 
 package src.view;
-
+import java.io.Serializable;
 /**
  *
  * @author JohnReedLOL
  */
-public class Display
+public class Display implements Serializable
 {
+    // Converts the class name into a base 35 number
+    private static final long serialVersionUID = Long.parseLong("Display", 35);
+
     private static View current_view_;
     
     // Display.display_ is static because there is only one display_  

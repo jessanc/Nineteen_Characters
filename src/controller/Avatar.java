@@ -11,7 +11,9 @@ package src.controller;
  */
 public class Avatar
 {
-    
+    // Converts the class name into a base 35 number
+    private static final long serialVersionUID = Long.parseLong("Avatar", 35);    
+
     // Avatar.avatar_ is static because there is only one avatar_  
     private static Entity avatar_;
     

@@ -14,6 +14,9 @@ import src.model.MapModel;
  */
 public class MapView extends View
 {
+
+    // Converts the class name into a base 35 number
+    private static final long serialVersionUID = Long.parseLong("MapView", 35);
 	
     private static final MapModel map_model_reference_ = MapModel.getaReferenceToTheMapModel();
     

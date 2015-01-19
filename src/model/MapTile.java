@@ -16,6 +16,9 @@ import src.controller.Terrain;
  */
 public class MapTile implements Serializable
 {
+    // Converts the class name into a base 35 number
+    private static final long serialVersionUID = Long.parseLong("MapTile", 35);
+
     Terrain terrain_;
     Entity entity_;
     LinkedList<Item> items_;

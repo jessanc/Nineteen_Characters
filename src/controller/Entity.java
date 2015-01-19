@@ -6,16 +6,15 @@
 package src.controller;
 
 import src.DrawableThing;
-import java.io.Serializable;
 import src.model.MapModel;
 /**
  *
  * @author JohnReedLOL
  */
-abstract public class Entity extends DrawableThing implements Serializable
+abstract public class Entity extends DrawableThing
 {
-    // Converts an entity's name [which must be unique] into a unique base 26 number
-    final long serialVersionUID = Long.parseLong(super.name_, 26); \
+    // Converts an entity's name [which must be unique] into a unique base 35 number
+    private static final long serialVersionUID = Long.parseLong("Entity", 35);
 
     Item inventory_[];
 

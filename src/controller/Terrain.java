@@ -6,13 +6,15 @@
 
 package src.controller;
 import src.DrawableThing;
-import java.io.Serializable;
 /**
  *
  * @author JohnReedLOL
  */
-public class Terrain extends DrawableThing implements Serializable
+public class Terrain extends DrawableThing
 {
+    // Converts a class name [which must be unique] into a unique base 35 number
+    private static final long serialVersionUID = Long.parseLong("Terrain", 35);
+
     public enum Color {
     GREEN, BLUE, GRAY //grass, water, mountain
     }

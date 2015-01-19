@@ -12,5 +12,7 @@ package src.controller;
  */
 public class Smasher extends Entity
 {
+    // Converts the class name into a base 35 number
+    private static final long serialVersionUID = Long.parseLong("Smasher", 35);
     
 }
