@@ -43,6 +43,27 @@ public final class StatsPack implements Serializable{
     	return_value.current_armor_rating_ = modifier.current_armor_rating_ + this.current_armor_rating_;
     	return return_value;
     }
+    
+        public StatsPack subtract(final StatsPack modifier) {
+    	StatsPack return_value = new StatsPack();
+    	return_value.lives_left_ = modifier.lives_left_ - this.lives_left_;
+    	return_value.strength_ = modifier.strength_ - this.strength_;
+    	return_value.agility_ = modifier.agility_ - this.agility_;
+    	return_value.intellect_ = modifier.intellect_ - this.intellect_;
+    	return_value.hardiness_ = modifier.hardiness_ - this.hardiness_;
+    	return_value.experience_ = modifier.experience_ - this.experience_ ;
+    	return_value.movement_ = modifier.movement_ - this.movement_;
+    	return_value.max_life_ = modifier.max_life_ - this.max_life_;
+    	return_value.max_mana_ = modifier.max_mana_ - this.max_mana_;
+    	return_value.current_level_ = modifier.current_level_ - this.current_level_;
+    	return_value.current_life_ = modifier.current_life_ - this.current_life_;
+    	return_value.current_mana_ = modifier.current_mana_ - this.current_mana_;
+    	return_value.current_offensive_rating_ = modifier.current_offensive_rating_ - this.current_offensive_rating_;
+    	return_value.current_defensive_rating_ = modifier.current_defensive_rating_ - this.current_defensive_rating_;
+    	return_value.current_armor_rating_ = modifier.current_armor_rating_ - this.current_armor_rating_;
+    	return return_value;
+    }
+    
     public void equals(final StatsPack modifier) {
     	this.lives_left_ = modifier.lives_left_ ;
     	this.strength_ = modifier.strength_ ;
