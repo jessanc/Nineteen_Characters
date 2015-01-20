@@ -53,8 +53,6 @@ abstract public class Entity extends DrawableThing
 
     }
 
-    abstract public void takeTurn();
-
     abstract public void moveUp();
 
     abstract public void moveUpRight();

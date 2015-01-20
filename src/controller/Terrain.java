@@ -17,8 +17,6 @@ public class Terrain extends DrawableThing
     public enum Color {
     GREEN, BLUE, GRAY //grass, water, mountain
     }
-    private final int x_;
-    private final int y_;
     Color color_;
     private char decal_;
     private boolean contains_water_;

@@ -18,6 +18,9 @@ public final class MapTile implements Serializable
 {
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("MapTile", 35);
+    
+    public final int x_;
+    public final int y_;
 
     Terrain terrain_;
     Entity entity_;

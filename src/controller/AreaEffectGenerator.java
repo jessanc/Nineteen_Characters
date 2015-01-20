@@ -17,25 +17,4 @@ public class AreaEffectGenerator extends Item
     public void activate() {
         
     }
-    
-    //area effects
-    public void hurtWithinRadius(int damage, int radius)
-    {
-
-    }
-
-    public void healWithinRadius(int heal_quantity, int radius)
-    {
-
-    }
-
-    public void killWithinRadius(boolean will_kill_players, boolean will_kill_npcs, int radius)
-    {
-
-    }
-
-    public void levelWithinRadius(boolean will_level_up_players, boolean will_level_up_npcs, int radius)
-    {
-
-    }
 }

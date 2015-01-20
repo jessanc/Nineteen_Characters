@@ -6,6 +6,7 @@
 
 package src.model;
 import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.io.Serializable;
 import src.view.Display;
 import src.controller.Entity;
@@ -26,12 +27,12 @@ public final class MapModel implements Serializable
     private static MapTile map_grid_[][];
     
     // String is the entity's name. The entity name must be unqiue or else bugs will occur.
-    private static LinkedHashMap<String, EntityHandle> entities_list_;
+    private static LinkedHashMap<String, MapTile> entity_tiles_list_;
 
     // Item is the address of an item in memory. Location is its xy coordinates on the grid.
-    private static LinkedHashMap<Item, Location> items_list_;
+    private static LinkedList<Item> items_list_;
     
-    private static LinkedHashMap<AreaEffectGenerator, Location> area_effect_generators_list_;
+    private static LinkedList<AreaEffectGenerator> area_effect_generators_list_;
     
     // MapModel.map_model_ is static because there is only one map_model_  
     private static MapModel map_model_;
