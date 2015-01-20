@@ -1,7 +1,7 @@
 package src.controller;
 import java.io.Serializable
 
-public class StatsPack implements Serializable{
+public final class StatsPack implements Serializable{
 	
     // primary stats
     private int lives_left_;

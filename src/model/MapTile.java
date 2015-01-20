@@ -14,7 +14,7 @@ import src.controller.Terrain;
  *
  * @author JohnReedLOL
  */
-public class MapTile implements Serializable
+public final class MapTile implements Serializable
 {
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("MapTile", 35);

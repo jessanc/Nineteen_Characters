@@ -12,7 +12,7 @@ import src.controller.Entity;
  *
  * @author JohnReedLOL
  */
-public class StatsView extends View
+public final class StatsView extends View
 {
 
     // Converts the class name into a base 35 number

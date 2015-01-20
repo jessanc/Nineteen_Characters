@@ -39,12 +39,13 @@ abstract public class Entity extends DrawableThing
     Item equipped_item_;
 
     private final int max_level_;
+    private int moves_left_;
 
-    private StatsPack stats_;
+    private StatsPack my_stats_after_powerups_;
 
     private void recalculateStats()
     {
-        stats_.equals(stats_.add(equipped_item_.get_stats_modifiers_()));
+        stats_.equals(stats_.add(equipped_item_.get_stats_pack_()));
     }
 
     public void levelUp()

@@ -6,7 +6,7 @@ abstract public class View implements Serializable {
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("View", 35);
 	
-	protected char[][] view_contents_;
+	private char[][] view_contents_;
 	
 	/**
 	 * returns the contents of a view as a 2D array

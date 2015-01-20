@@ -19,6 +19,7 @@ abstract public class DrawableThing implements Serializable
     // names of entities should be unique to fit in a hashmap.
     public final String name_;
 
+    // Everything that inherits from this class needs this reference to MapModel.
     protected static final MapModel map_model_reference_ = MapModel.getaReferenceToTheMapModel();
     
     // For things that take up only  1 tile or need to appear on a minimap
@@ -26,6 +27,12 @@ abstract public class DrawableThing implements Serializable
    
     private boolean is_viewable_;
     private boolean is_passable_;
+    
+    private StatsPack stats_pack_;
+    
+    public StatsPack get_stats_pack_() {
+        return this.stats_pack_;
+    }
     
     DrawableThing(String name, char representation) {
     	name_ = name;

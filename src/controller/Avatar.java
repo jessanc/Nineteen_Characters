@@ -9,7 +9,7 @@ package src.controller;
  *
  * @author JohnReedLOL
  */
-public class Avatar
+public final class Avatar
 {
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("Avatar", 35);    

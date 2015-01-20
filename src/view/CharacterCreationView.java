@@ -12,7 +12,7 @@ import src.controller.Entity;
  *
  * @author JohnReedLOL
  */
-public class CharacterCreationView extends View
+public final class CharacterCreationView extends View
 {
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("CharacterCreationView", 35);

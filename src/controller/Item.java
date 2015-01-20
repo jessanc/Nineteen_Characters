@@ -16,12 +16,6 @@ public class Item extends DrawableThing
 
     private boolean goesInInventory; //assume that you can wear anything that goes in your inventory
     private boolean isOneShot_;    
-
-    private StatsPack stats_modifiers_;
-    
-    public StatsPack get_stats_modifiers_() {
-        return this.stats_modifiers_;
-    }
     
     public void activate() {
         

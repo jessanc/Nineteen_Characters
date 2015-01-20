@@ -12,7 +12,7 @@ import src.model.MapModel;
  *
  * @author JohnReedLOL
  */
-public class MapView extends View
+public final class MapView extends View
 {
 
     // Converts the class name into a base 35 number

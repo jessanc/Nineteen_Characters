@@ -10,7 +10,7 @@ import src.view.Display;
  *
  * @author JohnReedLOL
  */
-public class AvatarController
+public final class AvatarController
 {
     private static final Display display_reference_ = Display.getaReferenceToTheDisplay();
     private static final Entity avatar_reference_ = Avatar.getaReferenceToTheAvatar();

@@ -15,7 +15,7 @@ import src.controller.AreaEffectGenerator;
  *
  * @author JohnReedLOL
  */
-public class MapModel implements Serializable
+public final class MapModel implements Serializable
 {
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("MapModel", 35);
