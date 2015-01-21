@@ -51,7 +51,7 @@ abstract public class Entity extends DrawableThing
     public void levelUp()
     {
 
-    }
+    }  
 
     abstract public void moveUp();
 

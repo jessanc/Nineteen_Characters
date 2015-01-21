@@ -1,7 +1,11 @@
 package src.controller;
-import java.io.Serializable
+import java.io.Serializable;
 
-public final class StatsPack implements Serializable{
+/**
+ * StatsPacks contain stats. StatsPacks can be combined to form new StatsPacks. 
+ * 
+ */
+final class StatsPack implements Serializable{
 	
     // primary stats
     private int lives_left_;

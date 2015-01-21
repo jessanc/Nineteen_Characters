@@ -9,10 +9,10 @@ package src.view;
 import src.controller.Avatar;
 import src.controller.Entity;
 /**
- *
+ * Players see the CharacterCreationView when they chose their occupation.
  * @author JohnReedLOL
  */
-public final class CharacterCreationView extends View
+final class CharacterCreationView extends View
 {
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("CharacterCreationView", 35);

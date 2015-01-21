@@ -9,10 +9,10 @@ package src.view;
 import src.model.MapModel;
 
 /**
- *
+ * Players see the MapView while they are interacting with the map
  * @author JohnReedLOL
  */
-public final class MapView extends View
+final class MapView extends View
 {
 
     // Converts the class name into a base 35 number

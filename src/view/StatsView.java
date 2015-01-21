@@ -9,10 +9,10 @@ package src.view;
 import src.controller.Avatar;
 import src.controller.Entity;
 /**
- *
+ * Players see the StatsView when they are checking their stats
  * @author JohnReedLOL
  */
-public final class StatsView extends View
+final class StatsView extends View
 {
 
     // Converts the class name into a base 35 number
