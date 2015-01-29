@@ -1,6 +1,7 @@
 package src.controller;
 
 import java.io.Serializable;
+import src.model.MapModel;
 import src.model.MapTile;
 /*
  * To change this license header, choose License Headers in Project Properties.

@@ -1,7 +1,7 @@
 package src.view;
 import java.io.Serializable;
 
-abstract public class View implements Serializable {
+abstract class View implements Serializable {
 
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("View", 35);

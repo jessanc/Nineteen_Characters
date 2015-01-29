@@ -17,25 +17,27 @@ abstract public class Entity extends DrawableThing
     // Converts an entity's name [which must be unique] into a unique base 35 number
     private static final long serialVersionUID = Long.parseLong("Entity", 35);
 
-    public enum FacingDirection
+    public enum Direction
     {
 
         UP, UP_RIGHT, RIGHT, DOWN_RIGHT,
-        DOWN, DOWN_LEFT, LEFT, UP_LEFT
+        DOWN, DOWN_LEFT, LEFT, UP_LEFT, UNDERNEATH_ME
     }
     private FacingDirection facing_direction_;
 
     // height and width values must be odd to be symmetrical with respect to center.
-    private final int height_;
-    private final int width_;
+    private final int height_ = 1; // default size is 1 tile
+    private final int width_ = 1; //default size is 1 tile
+
+    private final int x_respawn_point_;
+    private final int y_respawn_point_;
 
     // For things that take up more than 1 tile on the MapModel
-    private char[][] multi_character_representation_;
+    private char[][] multi_character_representation_; // defaults to single character representation
 
     Item inventory_[];
 
-    //Item weapon; // Worry about helmets, armor, weapons, later.
-    //Item armor;
+    // Only 1 equipped item in iteration 1
     Item equipped_item_;
 
     private final int max_level_;
@@ -51,35 +53,37 @@ abstract public class Entity extends DrawableThing
     public void levelUp()
     {
 
-    }  
+    }
 
-    abstract public void moveUp();
+    public int getMyXCordinate()
+    {
 
-    abstract public void moveUpRight();
+    }
 
-    abstract public void moveRight();
+    public int getMyYCordinate()
+    {
 
-    abstract public void moveDownRight();
+    }
 
-    abstract public void moveDown();
-
-    abstract public void moveDownLeft();
-
-    abstract public void moveLeft();
-
-    abstract public void moveUpLeft();
+    abstract public void moveInDirection(Direction direction)
+    {
+        facing_direction_ = direction;
+        map_model_reference_.moveOneTile(this, facing_direction_);
+    }
 
     abstract public void sendChat();
 
     abstract public void recieveChat();
 
-    abstract public void sendAttack();
+    abstract public void sendAttackInDirection();
 
-    abstract public void recieveAttack();
+    abstract public void recieveAttackFromEntity();
 
-    abstract public void useItem();
+    abstract public void useItemInDirection();
 
-    abstract public void pickUpItem();
+    abstract public void pickUpItemInDirection();
 
     abstract public void dropItem();
+
+    abstract public void tossItemInDirection();
 }
