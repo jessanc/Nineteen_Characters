@@ -7,7 +7,7 @@
 package src.view;
 
 import src.controller.Avatar;
-import src.controller.Entity;
+import src.controller.Character;
 /**
  * Players see the CharacterCreationView when they chose their occupation.
  * @author JohnReedLOL
@@ -17,7 +17,7 @@ final class CharacterCreationView extends View
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("CharacterCreationView", 35);
 	
-    private static final Entity avatar_reference_ = Avatar.getaReferenceToTheAvatar();
+    private static final Character avatar_reference_ = Avatar.getaReferenceToTheAvatar();
     
     /*
      * Generates a new CharacterCreationView. Uses avatar_reference_ to modify the avatar.

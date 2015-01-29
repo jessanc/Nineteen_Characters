@@ -9,7 +9,7 @@ import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.io.Serializable;
 import src.view.Display;
-import src.controller.Entity;
+import src.controller.Character;
 import src.controller.Item;
 import src.controller.AreaEffectGenerator;
 /**
@@ -47,22 +47,22 @@ public final class MapModel implements Serializable
     // Create a spawn queue
 
     // Functions to be called by DrawableThings
-public void spawn(Entity toSpawn, int time_until_spawn) {
+public void spaCharacterity toSpawn, int time_until_spawn) {
 
 }
-public void moveOneTile(Entity toMove, Entity.Direction moving_direction) {
+public void moveOnCharacterEntityCharactere, Entity.Direction moving_direction) {
 
 }
-public void sendAttack(Entity attacker, Entity.Direction attacking_direction) {
+public voidCharacterttack(EnCharacterttacker, Entity.Direction attacking_direction) {
 
 }
-public void recieveAttack(Entity attack_reciever, int damage) {
+public vCharactercieveAttack(Entity attack_reciever, int damage) {
 
 }
-public void moveEntity1TowardsEntity2(Entity entity_1, Entity entity_2) {
+public void moveECharacterTowardsECharacter(Entity entity_1, Entity entity_2) {
 
 }
-public void pushEntityInDirection(Entity entity, Entity.Direction push_direction) {
+public CharacterushEntCharacterirection(Entity entity, Entity.Direction push_direction) {
 
 }
 

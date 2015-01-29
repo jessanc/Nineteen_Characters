@@ -7,7 +7,7 @@
 package src.model;
 import java.util.LinkedList;
 import java.io.Serializable;
-import src.controller.Entity;
+import src.controller.Character;
 import src.controller.Item;
 import src.controller.Terrain;
 /**
@@ -23,7 +23,7 @@ public final class MapTile implements Serializable
     public final int y_;
 
     Terrain terrain_;
-    Entity entity_;
+ Characterity entity_;
     LinkedList<Item> items_;
             
 }

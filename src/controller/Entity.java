@@ -1,89 +1,102 @@
+package src.controller;
+
+import java.io.Serializable;
+import src.model.MapModel;
+import src.model.MapTile;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package src.controller;
-
-import src.model.MapModel;
 
 /**
  *
  * @author JohnReedLOL
  */
-abstract public class Entity extends DrawableThing
+abstract public class Entity implements Serializable
 {
 
-    // Converts an entity's name [which must be unique] into a unique base 35 number
-    private static final long serialVersionUID = Long.parseLong("Entity", 35);
+    // Converts the class name into a base 35 number
+    private static final long serialVersionUID = Long.parseLong("DrawableThing", 35);
 
-    public enum Direction
-    {
+    // names of items and terrain should be non-unique.
+    // names of entities should be unique to fit in a hashmap.
+    public final String name_;
 
-        UP, UP_RIGHT, RIGHT, DOWN_RIGHT,
-        DOWN, DOWN_LEFT, LEFT, UP_LEFT, UNDERNEATH_ME
-    }
-    private FacingDirection facing_direction_;
+    // Everything that inherits from this class needs this reference to MapModel.
+    protected static final MapModel map_model_reference_ = MapModel.getaReferenceToTheMapModel();
 
-    // height and width values must be odd to be symmetrical with respect to center.
-    private final int height_ = 1; // default size is 1 tile
-    private final int width_ = 1; //default size is 1 tile
+    // For things that take up only  1 tile or need to appear on a minimap
+    private final char single_character_representation_;
 
-    private final int x_respawn_point_;
-    private final int y_respawn_point_;
-
-    // For things that take up more than 1 tile on the MapModel
-    private char[][] multi_character_representation_; // defaults to single character representation
-
-    Item inventory_[];
-
-    // Only 1 equipped item in iteration 1
-    Item equipped_item_;
-
-    private final int max_level_;
-    private int moves_left_;
-
-    private StatsPack my_stats_after_powerups_;
-
-    private void recalculateStats()
-    {
-        stats_.equals(stats_.add(equipped_item_.get_stats_pack_()));
+    private boolean is_viewable_;
+    private boolean is_passable_;
+    
+    Entity(String name, char single_character_representation, boolean is_viewable, boolean is_passable) {
+        this.name_ = name;
+        this.single_character_representation_ = single_character_representation;
+        this.is_passable_ = is_passable;
+        this.is_viewable_ = is_viewable;
     }
 
-    public void levelUp()
+    private StatsPack stats_pack_;
+
+    private MapTile my_tile_;
+
+    private MapTile getMyTile()
+    {
+        return this.my_tile_;
+    }
+
+    private void setMyTile(MapTile other)
+    {
+        this.my_tile_ = other;
+    }
+
+    public StatsPack get_stats_pack_()
+    {
+        return this.stats_pack_;
+    }
+
+    Entity(String name, char representation)
+    {
+        name_ = name;
+        single_character_representation_ = representation;
+    }
+    
+    abstract public void onTurn();
+
+    //representation changes for terrain with/without decal
+    abstract char getRepresentation();
+
+    void setViewable(boolean is_viewable)
+    {
+        is_viewable_ = is_viewable;
+    }
+
+    void setPassable(boolean is_passable)
+    {
+        is_passable_ = is_passable;
+    }
+
+    //area effects
+    public void hurtWithinRadius(int damage, int radius)
     {
 
     }
 
-    public int getMyXCordinate()
+    public void healWithinRadius(int heal_quantity, int radius)
     {
 
     }
 
-    public int getMyYCordinate()
+    public void killWithinRadius(boolean will_kill_players, boolean will_kill_npcs, int radius)
     {
 
     }
 
-    abstract public void moveInDirection(Direction direction)
+    public void levelWithinRadius(boolean will_level_up_players, boolean will_level_up_npcs, int radius)
     {
-        facing_direction_ = direction;
-        map_model_reference_.moveOneTile(this, facing_direction_);
+
     }
-
-    abstract public void sendChat();
-
-    abstract public void recieveChat();
-
-    abstract public void sendAttackInDirection();
-
-    abstract public void recieveAttackFromEntity();
-
-    abstract public void useItemInDirection();
-
-    abstract public void pickUpItemInDirection();
-
-    abstract public void dropItem();
-
-    abstract public void tossItemInDirection();
 }
