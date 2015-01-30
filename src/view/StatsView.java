@@ -7,7 +7,7 @@
 package src.view;
 
 import src.controller.Avatar;
-import src.controller.Character;
+import src.controller.Entity;
 /**
  * Players see the StatsView when they are checking their stats
  * @author JohnReedLOL
@@ -18,7 +18,7 @@ final class StatsView extends View
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("StatsView", 35);
 	
-    private static final Character avatar_reference_ = Avatar.getaReferenceToTheAvatar();
+    private static final Entity avatar_reference_ = Avatar.getaReferenceToTheAvatar();
     /**
      * Generates a new StatsView using the avatar_reference.
      */

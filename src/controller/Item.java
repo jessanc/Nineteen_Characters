@@ -12,20 +12,13 @@ import src.model.MapTile;
  * Class item represents a stackable entity [Alex's definition of entity] that cannot move itself.
  * @author JohnReedLOL
  */
-public class Item extends Entity
+public class Item extends DrawableThing
 {
     // Converts a class name [which must be unique] into a unique base 35 number
     private static final long serialVersionUID = Long.parseLong("Item", 35);
 
-    private final boolean goesInInventory_; //assume that you can wear anything that goes in your inventory
-    private final boolean isOneShot_;  
-    
-    Item(String name, char single_character_representation, boolean is_viewable, 
-            boolean is_passable, boolean goesInInventory, boolean isOneShot) {
-        super(name, single_character_representation, is_viewable, is_passable);
-        this.goesInInventory_ = goesInInventory;
-        this.isOneShot_ = isOneShot;
-    }
+    protected boolean goesInInventory; //assume that you can wear anything that goes in your inventory
+    protected boolean isOneShot_;    
     
     public void onWalkOver() {
         
@@ -35,7 +28,7 @@ public class Item extends Entity
     * The use function allows an item to exert its effect on an entity.
     * @param target - The entity that the item will be used on.
     */
-    public void use(Character target) {
+    public void use(Entity target) {
         
     }
     

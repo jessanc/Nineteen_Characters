@@ -13,5 +13,5 @@ import src.view.Display;
 public final class AvatarController
 {
     private static final Display display_reference_ = Display.getaReferenceToTheDisplay();
-    private static final Character avatar_reference_ = Avatar.getaReferenceToTheAvatar();
+    private static final Entity avatar_reference_ = Avatar.getaReferenceToTheAvatar();
 }

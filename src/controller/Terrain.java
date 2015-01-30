@@ -9,7 +9,7 @@ package src.controller;
  *
  * @author JohnReedLOL
  */
-public class Terrain extends Entity
+public class Terrain extends DrawableThing
 {
     // Converts a class name [which must be unique] into a unique base 35 number
     private static final long serialVersionUID = Long.parseLong("Terrain", 35);
@@ -25,10 +25,10 @@ public class Terrain extends Entity
     void activate() {
         
     }
-    void applyTerrainEffect(Character entity) {
+    void applyTerrainEffect(Entity entity) {
         
     }
-    boolean determineIfCanPass(Character entity) {
+    boolean determineIfCanPass(Entity entity) {
         if(contains_water_ || contains_mountain_) {
             return false;
         }

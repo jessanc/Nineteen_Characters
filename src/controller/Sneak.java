@@ -10,7 +10,7 @@ package src.controller;
  *
  * @author JohnReedLOL
  */
-public final class Sneak  extends Character
+public final class Sneak  extends Entity
 {
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("Sneak", 35);

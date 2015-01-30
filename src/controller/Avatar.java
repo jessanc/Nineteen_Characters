@@ -15,9 +15,9 @@ public final class Avatar
     private static final long serialVersionUID = Long.parseLong("Avatar", 35);    
 
     // Avatar.avatar_ is static because there is only one avatar_  
-    private static Character avatar_;
+    private static Entity avatar_;
     
-    public static Character getaReferenceToTheAvatar() {
+    public static Entity getaReferenceToTheAvatar() {
         return Avatar.avatar_;
     }
 }
