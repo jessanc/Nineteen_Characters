@@ -1,6 +1,8 @@
 package src.controller;
 
 import java.io.Serializable;
+import src.Relationship;
+import src.RelationshipBuilder;
 import src.model.MapModel;
 import src.model.MapTile;
 /*
@@ -25,6 +27,8 @@ abstract public class DrawableThing implements Serializable
 
     // Everything that inherits from this class needs this reference to MapModel.
     protected static final MapModel map_model_reference_ = MapModel.getaReferenceToTheMapModel();
+    
+    protected static Relationship map_relationship_;
 
     // For things that take up only  1 tile or need to appear on a minimap
     private final char single_character_representation_;
@@ -55,6 +59,13 @@ abstract public class DrawableThing implements Serializable
     {
         name_ = name;
         single_character_representation_ = representation;
+    }
+    /**
+    * This function is necessary because the constructor cannot safely build the map_relationship.
+    * Make sure that this function uses a subclass this.
+    */
+    protected void initializeRelationship() {
+        map_relationship_ = RelationshipBuilder.makeRelationship(MapModel.getaReferenceToTheMapModel(), this);
     }
     
     abstract public void onTurn();

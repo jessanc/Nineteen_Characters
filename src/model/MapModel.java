@@ -8,6 +8,7 @@ package src.model;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.io.Serializable;
+import src.DirectionEnum;
 import src.view.Display;
 import src.controller.Entity;
 import src.controller.Item;
@@ -50,10 +51,10 @@ public final class MapModel implements Serializable
 public void spawn(Entity toSpawn, int time_until_spawn) {
 
 }
-public void moveOneTile(Entity toMove, Entity.Direction moving_direction) {
+public void moveOneTile(Entity toMove, DirectionEnum moving_direction) {
 
 }
-public void sendAttack(Entity attacker, Entity.Direction attacking_direction) {
+public void sendAttack(Entity attacker, DirectionEnum attacking_direction) {
 
 }
 public void recieveAttack(Entity attack_reciever, int damage) {
@@ -62,7 +63,7 @@ public void recieveAttack(Entity attack_reciever, int damage) {
 public void moveEntity1TowardsEntity2(Entity entity_1, Entity entity_2) {
 
 }
-public void pushEntityInDirection(Entity entity, Entity.Direction push_direction) {
+public void pushEntityInDirection(Entity entity, DirectionEnum push_direction) {
 
 }
 

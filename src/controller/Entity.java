@@ -5,6 +5,7 @@
  */
 package src.controller;
 
+import src.DirectionEnum;
 import src.model.MapModel;
 
 /**
@@ -16,14 +17,6 @@ abstract public class Entity extends DrawableThing
 
     // Converts an entity's name [which must be unique] into a unique base 35 number
     private static final long serialVersionUID = Long.parseLong("Entity", 35);
-
-    public enum Direction
-    {
-
-        UP, UP_RIGHT, RIGHT, DOWN_RIGHT,
-        DOWN, DOWN_LEFT, LEFT, UP_LEFT, UNDERNEATH_ME
-    }
-    private FacingDirection facing_direction_;
 
     // height and width values must be odd to be symmetrical with respect to center.
     private final int height_ = 1; // default size is 1 tile
@@ -65,10 +58,8 @@ abstract public class Entity extends DrawableThing
 
     }
 
-    abstract public void moveInDirection(Direction direction)
-    {
-        facing_direction_ = direction;
-        map_model_reference_.moveOneTile(this, facing_direction_);
+    abstract public void moveInDirection(DirectionEnum direction)
+        map_model_reference_.moveOneTile(this, direction);
     }
 
     abstract public void sendChat();

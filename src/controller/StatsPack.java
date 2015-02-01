@@ -5,7 +5,7 @@ import java.io.Serializable;
  * StatsPacks contain stats. StatsPacks can be combined to form new StatsPacks. 
  * 
  */
-final class StatsPack implements Serializable{
+public final class StatsPack implements Serializable{
 	
     // primary stats
     private int lives_left_;

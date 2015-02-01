@@ -25,7 +25,7 @@ public class Display implements Serializable
     }
     
     public void generateCharacterCreationView() {
-    	Display.current_view_ = new CharacterCreationView();
+    	Display.current_view_ = new AvatarCreationView();
     }
     
     public void generateMapView(int x, int y) {

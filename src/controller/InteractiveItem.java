@@ -10,9 +10,9 @@ package src.controller;
  *
  * @author JohnReedLOL
  */
-public class InteractableItem extends Item
+public class InteractiveItem extends Item
 {
-    InteractableItem() {
+    InteractiveItem() {
         this.setPassable(false);
         super.isOneShot_ = false;
         super.goesInInventory = false;
