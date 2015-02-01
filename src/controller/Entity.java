@@ -57,24 +57,4 @@ abstract public class Entity extends DrawableThing
     {
 
     }
-
-    abstract public void moveInDirection(DirectionEnum direction)
-        map_reference_.moveOneTile(this, direction);
-    }
-
-    abstract public void sendChat();
-
-    abstract public void recieveChat();
-
-    abstract public void sendAttackInDirection();
-
-    abstract public void recieveAttackFromEntity();
-
-    abstract public void useItemInDirection();
-
-    abstract public void pickUpItemInDirection();
-
-    abstract public void dropItem();
-
-    abstract public void tossItemInDirection();
 }

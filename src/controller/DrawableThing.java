@@ -97,7 +97,7 @@ abstract public class DrawableThing implements Serializable
 
     }
 
-    public void levelWithinRadius(boolean will_level_up_players, boolean will_level_up_npcs, int radius)
+    public void levelUpWithinRadius(boolean will_level_up_players, boolean will_level_up_npcs, int radius)
     {
 
     }
