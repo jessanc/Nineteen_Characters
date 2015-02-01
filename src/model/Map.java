@@ -17,7 +17,7 @@ import src.controller.AreaEffectGenerator;
  *
  * @author JohnReedLOL
  */
-public final class MapModel implements Serializable
+public final class Map implements Serializable
 {
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("MapModel", 35);
@@ -39,10 +39,10 @@ public final class MapModel implements Serializable
     private int time_measured_in_turns;
     
     // MapModel.map_model_ is static because there is only one map_model_  
-    private static MapModel map_model_;
+    private static Map the_map_;
     
-    public static MapModel getaReferenceToTheMapModel() {
-        return MapModel.map_model_;
+    public static Map getaReferenceToTheMap() {
+        return Map.the_map_;
     }
 
     // Create a spawn queue

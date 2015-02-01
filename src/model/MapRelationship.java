@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package src;
+package src.model;
 
 import src.controller.Entity;
 import src.controller.Item;
@@ -14,8 +14,8 @@ import src.controller.Terrain;
  * A relationship connects two different classes and tells the second class what it can do with the first.
  * @author JohnReedLOL
  */
-public class Relationship
+public class MapRelationship
 {
-    
+    protected final Map map_ = Map.getaReferenceToTheMap();
 
 }

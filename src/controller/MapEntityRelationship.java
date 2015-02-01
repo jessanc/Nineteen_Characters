@@ -3,19 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package src;
+package src.controller;
 
+import src.model.MapRelationship;
 import src.controller.Entity;
 
 /**
  * Tells an entity what it can do with the map.
  * @author JohnReedLOL
  */
-public class MapEntityRelationship extends Relationship
+public class MapEntityRelationship extends MapRelationship
 {
-    private MapModel map_;
-    private Entity entity_;
-    MapEntityRelationship(MapModel map_model, Entity entity) {
-        
+
+    private final Entity entity_;
+    MapEntityRelationship(Entity entity) {
+        entity_ = entity;
     }
 }

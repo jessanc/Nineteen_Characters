@@ -6,7 +6,8 @@
 
 package src.view;
 
-import src.model.MapModel;
+import src.model.Map;
+import src.model.MapRelationship;
 
 /**
  * Players see the MapView while they are interacting with the map
@@ -18,7 +19,13 @@ final class MapView extends View
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("MapView", 35);
 	
-    private static final MapModel map_model_reference_ = MapModel.getaReferenceToTheMapModel();
+    private static final Map map_reference_ = Map.getaReferenceToTheMap();
+    
+    //private static MapView the_map_view_;
+    
+    //public static MapView getaReferenceToTheMapView() {
+    //    return MapView.the_map_view_;
+    //}
     
     /*
      * Generates a new MapView from the map using coordinates x and y.

@@ -6,7 +6,7 @@
 package src.controller;
 
 import src.DirectionEnum;
-import src.model.MapModel;
+import src.model.Map;
 
 /**
  *
@@ -59,7 +59,7 @@ abstract public class Entity extends DrawableThing
     }
 
     abstract public void moveInDirection(DirectionEnum direction)
-        map_model_reference_.moveOneTile(this, direction);
+        map_reference_.moveOneTile(this, direction);
     }
 
     abstract public void sendChat();

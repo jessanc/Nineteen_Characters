@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package src;
+package src.controller;
 
+import src.model.MapRelationship;
 import src.controller.Entity;
 import src.controller.Terrain;
 
@@ -12,13 +13,13 @@ import src.controller.Terrain;
  * Tells the terrain what it can do with the map.
  * @author JohnReedLOL
  */
-public class MapTerrainRelationship extends Relationship
+public class MapTerrainRelationship extends MapRelationship
 {
 
-    private MapModel map_;
-    private Terrain terrain_;
+    private final Terrain terrain_;
 
-    public Relationship(MapModel map_model, Terrain terrain)
+    public MapTerrainRelationship(Terrain terrain)
     {
+        terrain_ = terrain;
     }
 }
