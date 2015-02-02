@@ -8,9 +8,30 @@ import java.io.Serializable;
  */
 public final class StatsPack implements Serializable {
 
-    private ConstantStats constant_stats_;
-
-    private ModifiableStats modifiable_stats_;
+    // Primary stats
+    private final int lives_left_;
+    private final int strength_level_;
+    private final int agility_level_;
+    private final int intellect_level_;
+    private final int hardiness_level_;
+    private int quantity_of_experience;
+    private final int movement_level_;
+    
+    // Constant Secondary Stats
+    private final int cached_current_level_;
+    private final int max_life_at_current_level_;
+    private final int max_mana_at_current_level_;
+    private final int max_offensive_rating_at_current_level_;
+    private final int max_defensive_rating_at_current_level_;
+    private final int max_armor_rating_at_current_level_;
+    
+    // Modifiable Secondary Stats
+    // These secondary stats can be modified without leveling up
+    private int current_life_;
+    private int current_mana_;
+    private int current_offensive_rating_;
+    private int current_defensive_rating_;
+    private int current_armor_rating_;
 
     /**
      * ONLY CALL THIS FUNCTION TO LEVEL UP PRIMARY STATS

@@ -7,7 +7,7 @@ package src;
  */
 
 /**
- *
+ * Initializes, opens the program.
  * @author JohnReedLOL
  */
 public class Main

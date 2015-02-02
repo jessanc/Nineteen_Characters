@@ -6,7 +6,7 @@
 package src;
 
 /**
- *
+ * Represents the eight directions plus one direction for staying in place
  * @author JohnReedLOL
  */
 public enum DirectionEnum

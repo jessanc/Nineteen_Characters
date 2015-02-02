@@ -13,9 +13,8 @@ import src.view.Display;
 import src.controller.Entity;
 import src.controller.Item;
 import src.controller.AreaEffectGenerator;
+import src.controller.Avatar;
 import src.controller.InteractiveItem;
-import src.controller.ModifiableStats;
-import src.controller.ConstantStats;
 import src.controller.StatsPack;
 import src.controller.Terrain;
 
@@ -33,6 +32,13 @@ public final class Map implements Serializable {
 
     //2d array of tiles.
     private MapTile map_grid_[][];
+    
+    // currently there is only one avatar
+    private static final Avatar avatar_ = new Avatar();
+    
+    public Avatar getAvatar(String name) {
+        return avatar_;
+    }
 
     // String is the entity's name. The entity name must be unqiue or else bugs will occur.
     private LinkedHashMap<String, MapTile> entity_tiles_list_;
@@ -78,7 +84,7 @@ public final class Map implements Serializable {
 
     }
 
-    public void levelUpEntity(Entity entity, ModifiableStats modifiable_stats_pack) {
+    public void levelUpEntity(Entity entity, StatsPack stats_pack) {
 
     }
 
@@ -88,15 +94,15 @@ public final class Map implements Serializable {
      * @param entity
      * @param modifiable_stats_pack
      */
-    public void levelDownEntity(Entity entity, CosntantStats constant_stats_pack) {
+    public void levelDownEntity(Entity entity, StatsPack stats_pack) {
 
     }
 
-    public void addStatsPackToEntity(Entity entity, ModifiableStats modifiable_stats_pack) {
+    public void addStatsPackToEntity(Entity entity, StatsPack stats_pack) {
 
     }
 
-    public void subtractStatsPackFromEntity(Entity entity, ModifiableStats modifiable_stats_pack) {
+    public void subtractStatsPackFromEntity(Entity entity, StatsPack stats_pack) {
 
     }
 
@@ -115,7 +121,7 @@ public final class Map implements Serializable {
      * @param radius
      * @author John-Michael Reed
      */
-    public void entityAreaModifyStatsPacks(boolean can_effect_players, boolean can_effect_npcs, ModifiableStats modifiable_stats_pack, int radius) {
+    public void entityAreaModifyStatsPacks(boolean can_effect_players, boolean can_effect_npcs, StatsPack stats_pack, int radius) {
 
     }
 
@@ -143,7 +149,7 @@ public final class Map implements Serializable {
      * @param radius
      * @author John-Michael Reed
      */
-    public void itemAreaModifyStatsPacks(Item item, boolean can_effect_players, boolean can_effect_npcs, ModifiableStats modifiable_stats_pack, int radius) {
+    public void itemAreaModifyStatsPacks(Item item, boolean can_effect_players, boolean can_effect_npcs, StatsPack stats_pack, int radius) {
 
     }
 
@@ -172,7 +178,7 @@ public final class Map implements Serializable {
      * @param radius
      * @author John-Michael Reed
      */
-    public void terrainAreaModifyStatsPacks(Terrain terrain, boolean can_effect_players, boolean can_effect_npcs, ModifiableStats modifiable_stats_pack, int radius) {
+    public void terrainAreaModifyStatsPacks(Terrain terrain, boolean can_effect_players, boolean can_effect_npcs, StatsPack stats_pack, int radius) {
 
     }
 

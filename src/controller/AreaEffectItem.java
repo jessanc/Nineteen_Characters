@@ -6,10 +6,10 @@
 
 package src.controller;
 /**
- *
+ * Produces an area effect
  * @author JohnReedLOL
  */
-public class AreaEffectGenerator extends Item
+public class AreaEffectItem extends Item
 {
     // Converts the class name into a unique base 35 number
     private static final long serialVersionUID = Long.parseLong("AreaEffectGenerator", 35);
