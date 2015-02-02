@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1036</x>
+      <y>238</y>
+      <w>203</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>src.model::Terrain
+--
+color_: Color
+decal_: char
+contains_water_
+contains_mountain_
+--
+applyTerrainEffect(Entity entity): void
+determineIfCanPass(Entity entity): boolean
+--
+Reason :
+--
+Person :
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>301</x>
+      <y>917</y>
+      <w>315</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>src.model::MapModel
+--
+Game World state
+--
+move()
+attack()
+...
+--
+Reason:
+--
+Person:
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>301</x>
+      <y>1113</y>
+      <w>280</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>src.model::MapTile
+--
+...
+--
+...
+--
+Reason: AThe representation of a single space on the map
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>497</x>
+      <y>602</y>
+      <w>189</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>src.view::Display
+--
+screen_size
+--
+draw()
+--
+Reason: The only thing allowed to draw to the screen
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>427</y>
+      <w>294</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>src.view::CharacterCreationView
+--
+new character
+...
+--
+getCharacterCreation()
+...
+--
+Reason: Handles displaying the character creator
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>154</x>
+      <y>427</y>
+      <w>371</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>src.view::MapView
+--
+current game world
+...
+--
+getMapDisplay()
+...
+--
+Reason : Handles displaying the map
+--
+Person:</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>910</x>
+      <y>427</y>
+      <w>294</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>src.view::StatsView
+--
+playerStats
+...
+--
+getPlayerStats()
+...
+--
+Reason : Handles generating the character stats view
+--
+Person:</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>553</x>
+      <y>266</y>
+      <w>168</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>
+src.view::View(abstract)
+--
+...
+--
+...
+--
+Reason: The base class for the views to inherit, will contain common functions that all classes which help draw the ui will have
+--
+Person</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1092</x>
+      <y>21</y>
+      <w>126</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+/src::DrawableThing/
+--
+name_: String
+representation_: char
+is_viewable_: boolean
+is_passable_: boolean
+--
+getRepresentation(): char
+setViewable(): char
+setPassable(): char
+--
+Reason :
+-- 
+Person :</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>637</x>
+      <y>357</y>
+      <w>49</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>294</x>
+      <y>357</y>
+      <w>301</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>410.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>686</x>
+      <y>357</y>
+      <w>315</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;430.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>497</x>
+      <y>525</y>
+      <w>84</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>525</x>
+      <y>525</y>
+      <w>420</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>580.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>434</x>
+      <y>525</y>
+      <w>105</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1050</x>
+      <y>525</y>
+      <w>567</w>
+      <h>308</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>790.0;420.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1540</x>
+      <y>189</y>
+      <w>420</w>
+      <h>532</h>
+    </coordinates>
+    <panel_attributes>/src.controller::Entity(abstract)/
+--
+map_model_reference_ = MapModel.getaReferenceToTheMapModel(): MapModel
+inventory_[]: Item
+equipped_item: Item
+lives_left: int
+strength: int
+agility: int
+intellect: int
+hardiness: int
+experience: int
+movement: int
+max_level: int
+max_life: int
+max_mana: int
+current_level: int
+current_life: int
+current_mana: int
+current_offensive_rating: int
+current_defensive_rating: int
+current_armor_rating: int
+--
+recalculateStats(): void
+levelUp(): void
+takeTurn(): void
+moveUp(): void
+moveUpRight(): void
+moveRight(): void
+moveDownRight(): void
+moveDown(): void
+moveDownLeft(): void
+moveLeft(): void
+moveUpLeft(): void
+sendChat(): void
+recieveChat(): void
+sendAttack(): void
+recieveAttack(): void
+useItem(): void
+pickUpItem(): void
+dropItem(): void
+areaAttack(int damage, int diameter): void
+areaHeal(int heal_quantity, int diameter): void
+areaKill(boolean will_kill_players, boolean will_kill_npcs, int diameter): void
+areaLevelUp(boolean will_level_up_players, boolean will_level_up_npcs, int diameter): void
+--
+Reason : 
+-- 
+Person :</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2002</x>
+      <y>819</y>
+      <w>133</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>src.controller::Item
+--
+isEquipable : boolean
+isOneShot : boolean
+--
+activate()
+...
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1582</x>
+      <y>819</y>
+      <w>182</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>src.controller::Avatar
+--
+avatar_: Entity
+--
+getaReferenceToTheAvatar(): Entity
+--
+Reason: The player character needs to be special so it can be acted on
+--
+Person</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>987</x>
+      <y>938</y>
+      <w>315</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>src.controller::AvatarController
+--
+ActionListener
+--
+
+--
+Reason : Handles input
+--
+Person</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1631</x>
+      <y>959</y>
+      <w>119</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>src.controller::Smasher
+--
+--
+--
+Reason:
+--
+Person:</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1491</x>
+      <y>959</y>
+      <w>105</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>src.controller::Sneak
+--
+--
+--
+Reason:
+--
+Person:
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1778</x>
+      <y>959</y>
+      <w>126</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>src.controller::Summoner
+--
+--
+--
+Reason:
+--
+Person:</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>679</x>
+      <y>623</y>
+      <w>511</w>
+      <h>329</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;710.0;450.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>651</y>
+      <w>252</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>340.0;10.0;10.0;380.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1547</x>
+      <y>889</y>
+      <w>77</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1631</x>
+      <y>889</y>
+      <w>70</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1666</x>
+      <y>889</y>
+      <w>189</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;250.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1708</x>
+      <y>714</y>
+      <w>84</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1757</x>
+      <y>847</y>
+      <w>259</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>350.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1911</x>
+      <y>714</y>
+      <w>147</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;190.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1085</x>
+      <y>140</y>
+      <w>49</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1211</x>
+      <y>119</y>
+      <w>357</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;490.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>294</x>
+      <y>980</y>
+      <w>42</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>40.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>147</y>
+      <w>1057</w>
+      <h>784</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>860.0;1100.0;120.0;1000.0;10.0;460.0;340.0;10.0;1490.0;330.0</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1260</x>
+      <y>840</y>
+      <w>335</w>
+      <h>111</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>322;21;21;98</additional_attributes>
+  </element>
+</diagram>
