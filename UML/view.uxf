@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>620</x>
-      <y>260</y>
+      <x>420</x>
+      <y>220</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
@@ -23,32 +23,12 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1010</x>
-      <y>260</y>
-      <w>210</w>
-      <h>190</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;interface&gt;&gt;
-View
---
-
---
-
---
-Responsibilities
--- 
-*-- </panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
       <x>810</x>
-      <y>550</y>
+      <y>220</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
-    <panel_attributes>StatsView
+    <panel_attributes>Viewport (abstract)
 --
 
 --
@@ -62,12 +42,12 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1060</x>
-      <y>550</y>
+      <x>610</x>
+      <y>510</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
-    <panel_attributes>MapView
+    <panel_attributes>StatsView (package private)
 --
 
 --
@@ -81,12 +61,31 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1310</x>
-      <y>550</y>
+      <x>860</x>
+      <y>510</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
-    <panel_attributes>CharacterView
+    <panel_attributes>MapView (package private)
+--
+
+--
+
+--
+Responsibilities
+-- 
+*-- </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1110</x>
+      <y>510</y>
+      <w>270</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>CharacterCreationView (package private)
 --
 
 --
@@ -100,13 +99,14 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>820</x>
-      <y>290</y>
+      <x>620</x>
+      <y>250</y>
       <w>210</w>
-      <h>50</h>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 lt=&lt;&lt;&lt;&lt;-
+contains the
 m1=1
 m2=1
 </panel_attributes>
@@ -115,9 +115,9 @@ m2=1
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>590</x>
-      <y>140</y>
-      <w>980</w>
+      <x>390</x>
+      <y>100</y>
+      <w>1000</w>
       <h>620</h>
     </coordinates>
     <panel_attributes>View
@@ -128,8 +128,8 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>890</x>
-      <y>480</y>
+      <x>690</x>
+      <y>440</y>
       <w>100</w>
       <h>90</h>
     </coordinates>
@@ -141,8 +141,8 @@ m1=require
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1200</x>
-      <y>440</y>
+      <x>1000</x>
+      <y>400</y>
       <w>90</w>
       <h>50</h>
     </coordinates>
@@ -154,8 +154,8 @@ m2=provide
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1070</x>
-      <y>480</y>
+      <x>870</x>
+      <y>440</y>
       <w>80</w>
       <h>90</h>
     </coordinates>
@@ -167,8 +167,8 @@ m1=require
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1270</x>
-      <y>450</y>
+      <x>1070</x>
+      <y>410</y>
       <w>190</w>
       <h>120</h>
     </coordinates>
@@ -180,8 +180,8 @@ m1=require
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>930</x>
-      <y>440</y>
+      <x>730</x>
+      <y>400</y>
       <w>130</w>
       <h>60</h>
     </coordinates>
@@ -193,8 +193,8 @@ m2=provide
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1080</x>
-      <y>440</y>
+      <x>880</x>
+      <y>400</y>
       <w>80</w>
       <h>60</h>
     </coordinates>
@@ -206,61 +206,79 @@ m2=provide
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
-      <y>730</y>
-      <w>40</w>
+      <x>700</x>
+      <y>690</y>
+      <w>190</w>
       <h>210</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 lt=&lt;&lt;&lt;&lt;-
 m1=1
 m2=1
-A</panel_attributes>
+References Avatar
+(recieves ref from Display)</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1140</x>
-      <y>730</y>
-      <w>40</w>
+      <x>940</x>
+      <y>690</y>
+      <w>200</w>
       <h>210</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 lt=&lt;&lt;&lt;&lt;-
 m1=1
 m2=1
-B</panel_attributes>
+References Map 
+(potentially via an interface)</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1390</x>
-      <y>730</y>
-      <w>40</w>
+      <x>1190</x>
+      <y>690</y>
+      <w>190</w>
       <h>200</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 lt=&lt;&lt;&lt;&lt;-
 m1=1
 m2=1
-C</panel_attributes>
+References Avatar
+(recieves ref from Display)</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>20</x>
-      <y>20</y>
-      <w>620</w>
-      <h>300</h>
+      <x>50</x>
+      <y>10</y>
+      <w>390</w>
+      <h>230</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;
-lt=&lt;&lt;&lt;&lt;-
-m1=1
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+lt=-&gt;
+has one
+m1=1 (Avatar)
 m2=1
-D</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;280.0;600.0;280.0</additional_attributes>
+</panel_attributes>
+    <additional_attributes>10.0;10.0;370.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>190</y>
+      <w>440</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+is associated with one
+m1=1 (Avatar)
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;420.0;220.0</additional_attributes>
   </element>
 </diagram>
