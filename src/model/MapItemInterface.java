@@ -4,20 +4,16 @@
  * and open the template in the editor.
  */
 
-package src.controller;
+package src.model;
 
 import src.model.MapRelationship;
+import src.controller.Item;
 import src.controller.Item;
 
 /**
  * Tells an item what it can do with the map.
  * @author JohnReedLOL
  */
-public class MapItemRelationship extends MapRelationship
+public interface MapItemInterface extends MapDrawableThingInterface
 {
-
-    private final Item item_;
-    MapItemRelationship(Item item) {
-        item_ = item;
-    }
 }

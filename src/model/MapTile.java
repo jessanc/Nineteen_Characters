@@ -21,6 +21,18 @@ public final class MapTile implements Serializable
     
     public final int x_;
     public final int y_;
+    
+    MapTile(int x, int y, Terrain t, Entity e, Item i) {
+        x_ = x;
+        y_ = y;
+        terrain_ = t;
+        entity_ = e;
+        items_ = new LinkedList<Item>();
+        
+        if (i != null) {
+        items_.add(i);
+        }
+    }
 
     Terrain terrain_;
     Entity entity_;

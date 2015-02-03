@@ -3,23 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package src.controller;
+package src.model;
 
 import src.model.MapRelationship;
 import src.controller.Entity;
+import src.controller.Terrain;
 import src.controller.Terrain;
 
 /**
  * Tells the terrain what it can do with the map.
  * @author JohnReedLOL
  */
-public class MapTerrainRelationship extends MapRelationship
+public interface MapTerrainInterface extends MapDrawableThingInterface
 {
-
-    private final Terrain terrain_;
-
-    public MapTerrainRelationship(Terrain terrain)
-    {
-        terrain_ = terrain;
-    }
 }

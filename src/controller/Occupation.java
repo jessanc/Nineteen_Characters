@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package src;
+package src.controller;
 
 /**
  *
  * @author JohnReedLOL
  */
-public enum DirectionEnum
-{
-    UP, UP_RIGHT, RIGHT, DOWN_RIGHT,
-    DOWN, DOWN_LEFT, LEFT, UP_LEFT, UNDERNEATH_ME
+abstract public class Occupation {
+    
 }

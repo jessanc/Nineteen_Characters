@@ -10,7 +10,7 @@ package src.controller;
  *
  * @author JohnReedLOL
  */
-public final class Summoner extends Entity
+public final class Summoner extends Occupation
 {
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("Summoner", 35);

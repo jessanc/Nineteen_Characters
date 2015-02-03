@@ -6,9 +6,6 @@
 package src.model;
 
 import src.Relationship;
-import src.controller.MapEntityRelationship;
-import src.controller.MapItemRelationship;
-import src.controller.MapTerrainRelationship;
 import src.model.Map;
 import src.model.MapRelationship;
 import src.controller.Entity;
@@ -24,16 +21,16 @@ public class MapRelationshipBuilder
 
     public static MapRelationship makeRelationship(Entity entity)
     {
-        MapRelationship relationship = new MapEntityRelationship(entity);
+        MapRelationship relationship = new MapEntityInterface(entity);
         return relationship;
     }
 
 public static MapRelationship makeRelationship(Item item) {
-        MapRelationship relationship = new MapItemRelationship(item);
+        MapRelationship relationship = new MapItemInterface(item);
         return relationship;
     }
     public static MapRelationship makeRelationship(Terrain terrain) {
-        MapRelationship relationship =  new MapTerrainRelationship(terrain);
+        MapRelationship relationship =  new MapTerrainInterface(terrain);
         return relationship;
     }
 

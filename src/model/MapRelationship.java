@@ -14,7 +14,7 @@ import src.controller.Terrain;
  * A relationship connects two different classes and tells the second class what it can do with the first.
  * @author JohnReedLOL
  */
-public class MapRelationship
+public abstract class MapRelationship
 {
     protected final Map map_ = Map.getaReferenceToTheMap();
 

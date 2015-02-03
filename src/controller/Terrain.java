@@ -3,36 +3,61 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package src.controller;
+
+import src.model.Map;
+import src.model.MapTerrainInterface;
+
 /**
  *
  * @author JohnReedLOL
  */
-public class Terrain extends DrawableThing
-{
+public class Terrain extends DrawableThing {
+
     // Converts a class name [which must be unique] into a unique base 35 number
     private static final long serialVersionUID = Long.parseLong("Terrain", 35);
 
+    // map_relationship_ is used in place of a map_referance_
+    private static MapTerrainInterface map_relationship_;
+
+    /**
+     * This function is necessary because the constructor cannot safely build
+     * the map_relationship. Make sure that this function uses a subclass this.
+     */
+    private void initializeMapRelationship() {
+        map_relationship_ = Map.getMyInterfaceWithTheMap(this);
+    }
+
     public enum Color {
-    GREEN, BLUE, GRAY //grass, water, mountain
+
+        GREEN, BLUE, GRAY //grass, water, mountain
     }
     Color color_;
     private char decal_;
-    private boolean contains_water_;
-    private boolean contains_mountain_;
-    
+    private final boolean contains_water_;
+    private final boolean contains_mountain_;
+
+    public Terrain(String name, char representation, boolean is_passable,
+            Color color, char decal, boolean contains_water, boolean contains_mountain) {
+        super(name, representation, is_passable);
+        color_ = color;
+        decal_ = decal;
+        contains_water_ = contains_water;
+        contains_mountain_ = is_passable;
+    }
+
     void activate() {
-        
+
     }
+
     void applyTerrainEffect(Entity entity) {
-        
+
     }
+
     boolean determineIfCanPass(Entity entity) {
-        if(contains_water_ || contains_mountain_) {
+        if (contains_water_ || contains_mountain_) {
             return false;
-        }
-        else {
+        } else {
             return true;
         }
     }

@@ -12,17 +12,17 @@ import src.controller.Entity;
  * Players see the StatsView when they are checking their stats
  * @author JohnReedLOL
  */
-final class StatsView extends View
+final class StatsView extends Viewport
 {
 
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("StatsView", 35);
 	
-    private static final Entity avatar_reference_ = Avatar.getaReferenceToTheAvatar();
+    private final Avatar avatar_reference_;
     /**
      * Generates a new StatsView using the avatar_reference.
      */
-    public StatsView() {
-    	
+    public StatsView(Avatar my_avatar) {
+    	avatar_reference_ = my_avatar;
     }
 }

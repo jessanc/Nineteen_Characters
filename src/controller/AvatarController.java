@@ -6,12 +6,15 @@
 
 package src.controller;
 import src.view.Display;
+import src.model.Map;
 /**
- *
+ * Uses keyboard input to control the avatar
  * @author JohnReedLOL
  */
 public final class AvatarController
 {
-    private static final Display display_reference_ = Display.getaReferenceToTheDisplay();
-    private static final Entity avatar_reference_ = Avatar.getaReferenceToTheAvatar();
+    // my avatar
+    private final Avatar avatar_reference_ = src.model.Map.getAvatar("avatar");
+    
+
 }

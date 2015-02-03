@@ -1,9 +1,8 @@
 package src.controller;
 
 import java.io.Serializable;
-import src.model.MapRelationship;
-import src.RelationshipBuilder;
 import src.model.Map;
+import src.model.MapDrawableThingInterface;
 import src.model.MapTile;
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -26,24 +25,39 @@ abstract public class DrawableThing implements Serializable
     public final String name_;
     
     // map_relationship_ is used in place of a map_referance_
-    protected static MapRelationship map_relationship_;
+    private static MapDrawableThingInterface map_relationship_;
+    
+    /**
+    * This function is necessary because the constructor cannot safely build the map_relationship.
+    * Make sure that this function uses a subclass this.
+    */
+    private void initializeMapRelationship() {
+        map_relationship_ = Map.getMyInterfaceWithTheMap(this);
+    }
 
     // For things that take up only  1 tile or need to appear on a minimap
     private final char single_character_representation_;
+    
+    DrawableThing(String name, char representation, boolean is_passable) {
+        name_ = name;
+        single_character_representation_ = representation;
+        is_passable_ = is_passable;
+        is_viewable_ = true;
+    }
 
-    private boolean is_viewable_;
     private boolean is_passable_;
+    private boolean is_viewable_;
 
-    private StatsPack stats_pack_;
+    private StatsPack stats_pack_ = new StatsPack();
 
-    private MapTile my_tile_;
+    private MapTile my_tile_ = null;
 
-    private MapTile getMyTile()
+    public MapTile getMyTile()
     {
         return this.my_tile_;
     }
 
-    private void setMyTile(MapTile other)
+    public void setMyTile(MapTile other)
     {
         this.my_tile_ = other;
     }
@@ -58,18 +72,14 @@ abstract public class DrawableThing implements Serializable
         name_ = name;
         single_character_representation_ = representation;
     }
-    /**
-    * This function is necessary because the constructor cannot safely build the map_relationship.
-    * Make sure that this function uses a subclass this.
-    */
-    protected void initializeMapRelationship() {
-        map_relationship_ = RelationshipBuilder.makeRelationship(Map.getaReferenceToTheMap(), this);
+    public void onTurn() {
+        
     }
-    
-    abstract public void onTurn();
 
     //representation changes for terrain with/without decal
-    abstract char getRepresentation();
+    char getRepresentation() {
+        return this.single_character_representation_;
+    }
 
     void setViewable(boolean is_viewable)
     {

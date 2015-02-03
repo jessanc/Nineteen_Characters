@@ -6,37 +6,53 @@
 
 package src.view;
 import java.io.Serializable;
+import java.util.Arrays;
+import src.controller.Avatar;
+import src.model.Map;
+import src.model.MapDisplayInterface;
 /**
- *
+ * Represents a single player's display
  * @author JohnReedLOL
  */
 public class Display implements Serializable
 {
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("Display", 35);
+    
+    // map_relationship_ is used in place of a map_referance_
+    private MapDisplayInterface map_relationship_;
 
-    private static View current_view_;
+    /**
+     * This function is necessary because the constructor cannot safely build
+     * the map_relationship. Make sure that this function uses a subclass this.
+     */
+    private void initializeMapRelationship() {
+        map_relationship_ = Map.getMyInterfaceWithTheMap(this);
+    }
     
-    // Display.display_ is static because there is only one display_  
-    private static Display display_;
+    private final Avatar referance_to_the_player_whose_screen_I_am_displaying_;
+
+    private Viewport current_view_;
     
-    public static Display getaReferenceToTheDisplay() {
-        return Display.display_;
+    public Display(Avatar avatar) {
+        referance_to_the_player_whose_screen_I_am_displaying_ = avatar;
     }
     
     public void generateCharacterCreationView() {
-    	Display.current_view_ = new AvatarCreationView();
+    	this.current_view_ = new AvatarCreationView(referance_to_the_player_whose_screen_I_am_displaying_);
     }
     
     public void generateMapView(int x, int y) {
-    	Display.current_view_ = new MapView(x, y);
+    	this.current_view_ = new MapView(map_relationship_, x, y);
     }
     
     public void generateStatsView() {
-    	Display.current_view_ = new StatsView();
+    	this.current_view_ = new StatsView(referance_to_the_player_whose_screen_I_am_displaying_);
     }
     
     public void printView() {
-    	char[][] toPrint = current_view_.getContents();
+    	// char[][] toPrint = current_view_.getContents();
+        // Use this to print a 2D array
+        // System.out.println(Arrays.deepToString(toPrint));
     }
 }

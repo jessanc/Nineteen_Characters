@@ -13,9 +13,8 @@ import src.view.Display;
 import src.controller.Entity;
 import src.controller.Item;
 import src.controller.AreaEffectGenerator;
-import src.controller.InteractiveItem;
-import src.controller.ModifiableStats;
-import src.controller.ConstantStats;
+import src.controller.Avatar;
+import src.controller.DrawableThing;
 import src.controller.StatsPack;
 import src.controller.Terrain;
 
@@ -24,15 +23,53 @@ import src.controller.Terrain;
  *
  * @author John-Michael Reed
  */
-public final class Map implements Serializable { 
+public final class Map implements Serializable, MapDrawableThingInterface,
+        MapEntityInterface, MapItemInterface, MapDisplayInterface,
+        MapAvatarInterface, MapTerrainInterface {
+    
+    private Map() {} // Creation of multiple maps is forbidden.
+
+    // MapModel.map_model_ is static because there is only one map_model_  
+    private static Map the_map_;
+
+    public static MapEntityInterface getMyInterfaceWithTheMap(Entity e) {
+        return (MapEntityInterface) Map.the_map_;
+    }
+
+    public static MapItemInterface getMyInterfaceWithTheMap(Item i) {
+        return (MapItemInterface) Map.the_map_;
+    }
+
+    public static MapDisplayInterface getMyInterfaceWithTheMap(Display d) {
+        return (MapDisplayInterface) Map.the_map_;
+    }
+
+    public static MapAvatarInterface getMyInterfaceWithTheMap(Avatar a) {
+        return (MapAvatarInterface) Map.the_map_;
+    }
+
+    public static MapTerrainInterface getMyInterfaceWithTheMap(Terrain t) {
+        return (MapTerrainInterface) Map.the_map_;
+    }
+    
+    public static MapTerrainInterface getMyInterfaceWithTheMap(DrawableThing d) {
+        return (MapTerrainInterface) Map.the_map_;
+    }
 
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("MapModel", 35);
 
-    private final Display display_reference_ = Display.getaReferenceToTheDisplay();
+    private final Display display_reference_ = avatar_.get_my_display();
 
     //2d array of tiles.
     private MapTile map_grid_[][];
+
+    // currently there is only one avatar
+    private static final Avatar avatar_ = new Avatar("avatar", 'x', false, 0, 0);
+
+    public static Avatar getAvatar(String name) {
+        return avatar_;
+    }
 
     // String is the entity's name. The entity name must be unqiue or else bugs will occur.
     private LinkedHashMap<String, MapTile> entity_tiles_list_;
@@ -45,20 +82,13 @@ public final class Map implements Serializable {
     // The map has a clock
     private int time_measured_in_turns;
 
-    // MapModel.map_model_ is static because there is only one map_model_  
-    private static Map the_map_;
-
-    public static Map getaReferenceToTheMap() {
-        return Map.the_map_;
-    }
-
     // Create a spawn queue
     // Functions to be called by DrawableThings
     public void spawn(Entity toSpawn, int time_until_spawn) {
 
     }
 
-    public void moveOneTile(Entity toMove, DirectionEnum moving_direction) {
+    public void moveInDirection(Entity toMove, int DeltaX, int DeltaY) {
 
     }
 
@@ -78,7 +108,7 @@ public final class Map implements Serializable {
 
     }
 
-    public void levelUpEntity(Entity entity, ModifiableStats modifiable_stats_pack) {
+    public void levelUpEntity(Entity entity, StatsPack stats_pack) {
 
     }
 
@@ -88,19 +118,15 @@ public final class Map implements Serializable {
      * @param entity
      * @param modifiable_stats_pack
      */
-    public void levelDownEntity(Entity entity, CosntantStats constant_stats_pack) {
+    public void levelDownEntity(Entity entity, StatsPack stats_pack) {
 
     }
 
-    public void addStatsPackToEntity(Entity entity, ModifiableStats modifiable_stats_pack) {
+    public void addStatsPackToEntity(Entity entity, StatsPack stats_pack) {
 
     }
 
-    public void subtractStatsPackFromEntity(Entity entity, ModifiableStats modifiable_stats_pack) {
-
-    }
-
-    public void interactEntityWithItem(Entity entity, InteractiveItem interactive_item) {
+    public void subtractStatsPackFromEntity(Entity entity, StatsPack stats_pack) {
 
     }
 // Entity Area Effects
@@ -115,7 +141,7 @@ public final class Map implements Serializable {
      * @param radius
      * @author John-Michael Reed
      */
-    public void entityAreaModifyStatsPacks(boolean can_effect_players, boolean can_effect_npcs, ModifiableStats modifiable_stats_pack, int radius) {
+    public void entityAreaModifyStatsPacks(boolean can_effect_players, boolean can_effect_npcs, StatsPack stats_pack, int radius) {
 
     }
 
@@ -143,7 +169,7 @@ public final class Map implements Serializable {
      * @param radius
      * @author John-Michael Reed
      */
-    public void itemAreaModifyStatsPacks(Item item, boolean can_effect_players, boolean can_effect_npcs, ModifiableStats modifiable_stats_pack, int radius) {
+    public void itemAreaModifyStatsPacks(Item item, boolean can_effect_players, boolean can_effect_npcs, StatsPack stats_pack, int radius) {
 
     }
 
@@ -172,7 +198,7 @@ public final class Map implements Serializable {
      * @param radius
      * @author John-Michael Reed
      */
-    public void terrainAreaModifyStatsPacks(Terrain terrain, boolean can_effect_players, boolean can_effect_npcs, ModifiableStats modifiable_stats_pack, int radius) {
+    public void terrainAreaModifyStatsPacks(Terrain terrain, boolean can_effect_players, boolean can_effect_npcs, StatsPack stats_pack, int radius) {
 
     }
 
