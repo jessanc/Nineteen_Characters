@@ -14,7 +14,13 @@ import src.model.Map;
 public final class AvatarController
 {
     // my avatar
+<<<<<<< HEAD
     private final Avatar avatar_reference_ = src.model.Map.getAvatar("avatar");
     
 
+=======
+    private final Avatar avatar_reference_ = src.model.Map.getAvatar("player1");
+    // This display corresponds to that avatar.
+    private Display display_ = new Display(avatar_reference_);
+>>>>>>> ad093437758541ab2bc62b622ae1d4828731d6b2
 }

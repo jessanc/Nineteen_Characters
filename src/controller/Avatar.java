@@ -11,6 +11,7 @@ import src.view.Display;
 
 /**
  * Each avatar represents a player
+<<<<<<< HEAD
  *
  * @author JohnReedLOL
  */
@@ -41,4 +42,12 @@ public final class Avatar extends Entity {
     private void initializeMapRelationship() {
         map_relationship_ = Map.getMyInterfaceWithTheMap(this);
     }
+=======
+ * @author JohnReedLOL
+ */
+public final class Avatar extends Entity
+{
+    // Converts the class name into a base 35 number
+    private static final long serialVersionUID = Long.parseLong("Avatar", 35);
+>>>>>>> ad093437758541ab2bc62b622ae1d4828731d6b2
 }

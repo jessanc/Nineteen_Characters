@@ -14,11 +14,32 @@ public final class StatsPack implements Serializable {
     private final int agility_level_;
     private final int intellect_level_;
     private final int hardiness_level_;
+<<<<<<< HEAD
     private int quantity_of_experience_;
     private final int movement_level_;
 
     // Gets decremented every time an entity moves
     private int moves_left_in_turn_;
+=======
+    private int quantity_of_experience;
+    private final int movement_level_;
+    
+    // Constant Secondary Stats
+    private final int cached_current_level_;
+    private final int max_life_at_current_level_;
+    private final int max_mana_at_current_level_;
+    private final int max_offensive_rating_at_current_level_;
+    private final int max_defensive_rating_at_current_level_;
+    private final int max_armor_rating_at_current_level_;
+    
+    // Modifiable Secondary Stats
+    // These secondary stats can be modified without leveling up
+    private int current_life_;
+    private int current_mana_;
+    private int current_offensive_rating_;
+    private int current_defensive_rating_;
+    private int current_armor_rating_;
+>>>>>>> ad093437758541ab2bc62b622ae1d4828731d6b2
 
     // Constant Secondary Stats
     private final int cached_current_level_;

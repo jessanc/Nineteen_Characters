@@ -18,7 +18,11 @@ final class StatsView extends Viewport
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("StatsView", 35);
 	
+<<<<<<< HEAD
     private final Avatar avatar_reference_;
+=======
+    private static final Avatar avatar_reference_;
+>>>>>>> ad093437758541ab2bc62b622ae1d4828731d6b2
     /**
      * Generates a new StatsView using the avatar_reference.
      */

@@ -6,7 +6,7 @@
 package src.controller;
 
 /**
- *
+ * Represents the eight directions plus one direction for staying in place
  * @author JohnReedLOL
  */
 abstract public class Occupation {
