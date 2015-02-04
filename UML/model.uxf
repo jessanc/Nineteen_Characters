@@ -29,9 +29,9 @@ Testing:</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>738</x>
+      <x>702</x>
       <y>27</y>
-      <w>189</w>
+      <w>315</w>
       <h>243</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
@@ -257,33 +257,33 @@ Testing:</panel_attributes>
     <coordinates>
       <x>585</x>
       <y>261</y>
-      <w>207</w>
+      <w>171</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>210.0;10.0;10.0;80.0</additional_attributes>
+    <additional_attributes>170.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>810</x>
       <y>261</y>
-      <w>36</w>
+      <w>27</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;20.0;80.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>864</x>
+      <x>900</x>
       <y>261</y>
-      <w>198</w>
+      <w>162</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;200.0;80.0</additional_attributes>
+    <additional_attributes>10.0;10.0;160.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -370,7 +370,7 @@ Aggregation (lists one or more)
       <x>63</x>
       <y>675</y>
       <w>189</w>
-      <h>189</h>
+      <h>198</h>
     </coordinates>
     <panel_attributes>
 AvatarController
@@ -394,9 +394,9 @@ Testing:</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>153</x>
-      <y>855</y>
+      <y>864</y>
       <w>90</w>
-      <h>99</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 lt=-&gt;&gt;&gt;&gt;
@@ -404,7 +404,7 @@ m1=1
 m2=1
 controls one
 </panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
