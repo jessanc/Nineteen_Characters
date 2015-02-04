@@ -463,45 +463,6 @@ m1=require
     <additional_attributes>20.0;480.0;10.0;180.0;190.0;10.0</additional_attributes>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>900</x>
-      <y>810</y>
-      <w>402</w>
-      <h>96</h>
-    </coordinates>
-    <panel_attributes>
-
-</panel_attributes>
-    <additional_attributes>650.0;140.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>750</x>
-      <y>810</y>
-      <w>168</w>
-      <h>162</h>
-    </coordinates>
-    <panel_attributes>
-
-</panel_attributes>
-    <additional_attributes>10.0;250.0;260.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>918</x>
-      <y>810</y>
-      <w>48</w>
-      <h>144</h>
-    </coordinates>
-    <panel_attributes>
-
-</panel_attributes>
-    <additional_attributes>60.0;220.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
       <x>660</x>
