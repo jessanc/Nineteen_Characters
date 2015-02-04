@@ -5,7 +5,6 @@
  */
 package src.model;
 
-import src.model.MapRelationship;
 import src.controller.Entity;
 
 /**
@@ -14,7 +13,7 @@ import src.controller.Entity;
  * @author JohnReedLOL
  */
 public interface MapEntityInterface extends MapDrawableThingInterface {
-
+/*
     abstract public void moveInDirection(Entity toMove, int DeltaX, int DeltaY);
 
     abstract public void sendChat();
@@ -32,4 +31,5 @@ public interface MapEntityInterface extends MapDrawableThingInterface {
     abstract public void dropItem();
 
     abstract public void tossItemInDirection();
+    */
 }

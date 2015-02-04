@@ -5,7 +5,6 @@
  */
 package src.model;
 
-import src.model.MapRelationship;
 import src.controller.Entity;
 import src.controller.Terrain;
 import src.controller.Terrain;

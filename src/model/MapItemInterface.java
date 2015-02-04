@@ -6,7 +6,6 @@
 
 package src.model;
 
-import src.model.MapRelationship;
 import src.controller.Item;
 import src.controller.Item;
 

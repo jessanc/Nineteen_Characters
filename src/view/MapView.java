@@ -12,7 +12,7 @@ import src.model.MapDisplayInterface;
  *
  * @author JohnReedLOL
  */
-<<<<<<< HEAD
+
 final class MapView extends Viewport {
 
     // Converts the class name into a base 35 number
@@ -29,23 +29,5 @@ final class MapView extends Viewport {
         map_relationship_ = map_relationship;
         xPos_ = x;
         yPos_ = y;
-=======
-final class MapView extends View {
-
-    // Converts the class name into a base 35 number
-    private static final long serialVersionUID = Long.parseLong("MapView", 35);
-
-    //private static MapView the_map_view_;
-    private static final Map map_reference_ = Map.getaReferenceToTheMap();
-
-    //public static MapView getaReferenceToTheMapView() {
-    //    return MapView.the_map_view_;
-    //}
-    /*
-     * Generates a new MapView from the map using coordinates x and y.
-     */
-    public MapView(int x, int y) {
-
->>>>>>> ad093437758541ab2bc62b622ae1d4828731d6b2
     }
 }

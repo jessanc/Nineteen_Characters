@@ -72,6 +72,6 @@ abstract public class Entity extends DrawableThing {
         return super.getMyTile().y_;
     }
     public void moveBy(int x, int y) {
-        map_relationship_.moveInDirection(this, x, y);
+        //map_relationship_.moveInDirection(this, x, y);
     }
 }

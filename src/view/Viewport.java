@@ -12,7 +12,7 @@ abstract class Viewport implements Serializable {
 	 * returns the contents of a view as a 2D array
 	 * @return the 2D array of characters that represents the view
 	 */
-	//abstract public char[][] getContents() {
-		
-	//}
+	public char[][] getContents() {
+	return this.view_contents_;	
+	}
 }

@@ -8,17 +8,11 @@ package src.model;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.io.Serializable;
-import src.DirectionEnum;
 import src.view.Display;
 import src.controller.Entity;
 import src.controller.Item;
-import src.controller.AreaEffectGenerator;
 import src.controller.Avatar;
-<<<<<<< HEAD
 import src.controller.DrawableThing;
-=======
-import src.controller.InteractiveItem;
->>>>>>> ad093437758541ab2bc62b622ae1d4828731d6b2
 import src.controller.StatsPack;
 import src.controller.Terrain;
 
@@ -67,13 +61,6 @@ public final class Map implements Serializable, MapDrawableThingInterface,
 
     //2d array of tiles.
     private MapTile map_grid_[][];
-    
-    // currently there is only one avatar
-    private static final Avatar avatar_ = new Avatar();
-    
-    public Avatar getAvatar(String name) {
-        return avatar_;
-    }
 
     // currently there is only one avatar
     private static final Avatar avatar_ = new Avatar("avatar", 'x', false, 0, 0);
@@ -88,8 +75,6 @@ public final class Map implements Serializable, MapDrawableThingInterface,
     // Item is the address of an item in memory. Location is its xy coordinates on the grid.
     private LinkedList<Item> items_list_;
 
-    private LinkedList<AreaEffectGenerator> area_effect_generators_list_;
-
     // The map has a clock
     private int time_measured_in_turns;
 
@@ -103,7 +88,7 @@ public final class Map implements Serializable, MapDrawableThingInterface,
 
     }
 
-    public void sendAttack(Entity attacker, DirectionEnum attacking_direction) {
+    public void sendAttack(Entity attacker, int x, int y) {
 
     }
 
@@ -115,7 +100,7 @@ public final class Map implements Serializable, MapDrawableThingInterface,
 
     }
 
-    public void pushEntityInDirection(Entity entity, DirectionEnum push_direction) {
+    public void pushEntityInDirection(Entity entity, int x, int y) {
 
     }
 
@@ -130,21 +115,10 @@ public final class Map implements Serializable, MapDrawableThingInterface,
      * @param modifiable_stats_pack
      */
     public void levelDownEntity(Entity entity, StatsPack stats_pack) {
-<<<<<<< HEAD
 
     }
 
     public void addStatsPackToEntity(Entity entity, StatsPack stats_pack) {
-=======
-
-    }
-
-    public void addStatsPackToEntity(Entity entity, StatsPack stats_pack) {
-
-    }
-
-    public void subtractStatsPackFromEntity(Entity entity, StatsPack stats_pack) {
->>>>>>> ad093437758541ab2bc62b622ae1d4828731d6b2
 
     }
 

@@ -19,7 +19,7 @@ public class Display implements Serializable
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("Display", 35);
     
-<<<<<<< HEAD
+
     // map_relationship_ is used in place of a map_referance_
     private MapDisplayInterface map_relationship_;
 
@@ -34,22 +34,13 @@ public class Display implements Serializable
     private final Avatar referance_to_the_player_whose_screen_I_am_displaying_;
 
     private Viewport current_view_;
-=======
-    private final Avatar referance_to_the_player_whose_screen_I_am_displaying_;
-
-    private View current_view_;
-    
-    Display(Avatar avatar) {
-        referance_to_the_player_whose_screen_I_am_displaying_ = avatar;
-    }
->>>>>>> ad093437758541ab2bc62b622ae1d4828731d6b2
     
     public Display(Avatar avatar) {
         referance_to_the_player_whose_screen_I_am_displaying_ = avatar;
     }
     
     public void generateCharacterCreationView() {
-<<<<<<< HEAD
+
     	this.current_view_ = new AvatarCreationView(referance_to_the_player_whose_screen_I_am_displaying_);
     }
     
@@ -62,25 +53,8 @@ public class Display implements Serializable
     }
     
     public void printView() {
-    	// char[][] toPrint = current_view_.getContents();
-        // Use this to print a 2D array
-        // System.out.println(Arrays.deepToString(toPrint));
-=======
-    	this.current_view_ = new AvatarCreationView();
-    }
-    
-    public void generateMapView(int x, int y) {
-    	this.current_view_ = new MapView(x, y);
-    }
-    
-    public void generateStatsView() {
-    	this.current_view_ = new StatsView();
-    }
-    
-    public void printView() {
     	char[][] toPrint = current_view_.getContents();
         // Use this to print a 2D array
         System.out.println(Arrays.deepToString(toPrint));
->>>>>>> ad093437758541ab2bc62b622ae1d4828731d6b2
     }
 }
