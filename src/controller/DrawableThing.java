@@ -38,14 +38,12 @@ abstract public class DrawableThing implements Serializable
     // For things that take up only  1 tile or need to appear on a minimap
     private final char single_character_representation_;
     
-    DrawableThing(String name, char representation, boolean is_passable) {
+    DrawableThing(String name, char representation) {
         name_ = name;
         single_character_representation_ = representation;
-        is_passable_ = is_passable;
         is_viewable_ = true;
     }
 
-    private boolean is_passable_;
     private boolean is_viewable_;
 
     private StatsPack stats_pack_ = new StatsPack();
@@ -67,11 +65,6 @@ abstract public class DrawableThing implements Serializable
         return this.stats_pack_;
     }
 
-    DrawableThing(String name, char representation)
-    {
-        name_ = name;
-        single_character_representation_ = representation;
-    }
     public void onTurn() {
         
     }
@@ -85,10 +78,10 @@ abstract public class DrawableThing implements Serializable
     {
         is_viewable_ = is_viewable;
     }
-
-    void setPassable(boolean is_passable)
+    
+    boolean getViewable()
     {
-        is_passable_ = is_passable;
+        return this.is_viewable_;
     }
 
     //area effects

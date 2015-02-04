@@ -18,7 +18,7 @@ public class Terrain extends DrawableThing {
     private static final long serialVersionUID = Long.parseLong("Terrain", 35);
 
     // map_relationship_ is used in place of a map_referance_
-    private static MapTerrainInterface map_relationship_;
+    private MapTerrainInterface map_relationship_;
 
     /**
      * This function is necessary because the constructor cannot safely build
@@ -39,7 +39,7 @@ public class Terrain extends DrawableThing {
 
     public Terrain(String name, char representation, boolean is_passable,
             Color color, char decal, boolean contains_water, boolean contains_mountain) {
-        super(name, representation, is_passable);
+        super(name, representation);
         color_ = color;
         decal_ = decal;
         contains_water_ = contains_water;

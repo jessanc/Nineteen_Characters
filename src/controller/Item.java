@@ -7,6 +7,7 @@
 package src.controller;
 
 import src.model.Map;
+import src.model.MapItemAssociation;
 import src.model.MapItemInterface;
 import src.model.MapTile;
 
@@ -20,21 +21,22 @@ public class Item extends DrawableThing
     private static final long serialVersionUID = Long.parseLong("Item", 35);
     
     // map_relationship_ is used in place of a map_referance_
-    private static MapItemInterface map_relationship_;
+    private MapItemAssociation map_relationship_;
     
     public Item(String name, char representation, boolean is_passable, 
             boolean goes_in_inventory, boolean is_one_shot) {
-        super(name, representation, is_passable);
-        goes_in_inventory_ = goes_in_inventory;
-        is_one_shot_ = is_one_shot;
+        super(name, representation);
+        initializeMapRelationship(is_passable, goes_in_inventory, is_one_shot);
     }
 
     /**
      * This function is necessary because the constructor cannot safely build
      * the map_relationship. Make sure that this function uses a subclass this.
      */
-    private void initializeMapRelationship() {
-        map_relationship_ = Map.getMyInterfaceWithTheMap(this);
+    private void initializeMapRelationship(boolean is_passable, boolean goes_in_inventory, 
+            boolean is_one_shot) {
+        map_relationship_ = new MapItemAssociation(Map.getMyInterfaceWithTheMap(this), 
+                this, is_passable, goes_in_inventory, is_one_shot);
     }
 
     protected boolean goes_in_inventory_; //assume that you can wear anything that goes in your inventory
