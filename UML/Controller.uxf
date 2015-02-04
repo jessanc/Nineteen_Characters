@@ -164,7 +164,8 @@ Testing:</panel_attributes>
 --
 *Rationale*
 Occupation for smasher
-An entity becomes a smasher if they implement this
+An entity becomes a smasher 
+if they implement this
 
 --
 Implemention:
