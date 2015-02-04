@@ -8,6 +8,7 @@ package src.controller;
 import src.model.Map;
 import src.model.MapEntityInterface;
 import src.controller.Occupation;
+import src.model.MapEntityAssociation;
 /**
  *
  * @author JohnReedLOL
@@ -18,14 +19,14 @@ abstract public class Entity extends DrawableThing {
     private static final long serialVersionUID = Long.parseLong("Entity", 35);
 
     // map_relationship_ is used in place of a map_referance_
-    private static MapEntityInterface map_relationship_;
+    private static MapEntityAssociation map_relationship_;
 
     /**
      * This function is necessary because the constructor cannot safely build
      * the map_relationship. Make sure that this function uses a subclass this.
      */
     private void initializeMapRelationship() {
-        map_relationship_ = Map.getMyInterfaceWithTheMap(this);
+        map_relationship_ = new MapEntityAssociation(Map.getMyInterfaceWithTheMap(this), this);
     }
 
     // height and width values must be odd to be symmetrical with respect to center.

@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>684</x>
+      <x>621</x>
       <y>675</y>
       <w>189</w>
       <h>189</h>
@@ -29,7 +29,7 @@ Testing:</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>702</x>
+      <x>639</x>
       <y>27</y>
       <w>315</w>
       <h>243</h>
@@ -58,7 +58,7 @@ Testing: </panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>558</x>
+      <x>495</x>
       <y>333</y>
       <w>225</w>
       <h>225</h>
@@ -86,7 +86,7 @@ Testing: </panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>801</x>
+      <x>738</x>
       <y>333</y>
       <w>189</w>
       <h>198</h>
@@ -112,7 +112,7 @@ Testing: </panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1017</x>
+      <x>954</x>
       <y>333</y>
       <w>189</w>
       <h>171</h>
@@ -136,7 +136,7 @@ Testing: </panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>63</x>
+      <x>0</x>
       <y>936</y>
       <w>189</w>
       <h>171</h>
@@ -160,7 +160,7 @@ Testing:</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>999</x>
+      <x>936</x>
       <y>675</y>
       <w>189</w>
       <h>180</h>
@@ -168,7 +168,8 @@ Testing:</panel_attributes>
     <panel_attributes>
 MapTile
 --
-
+final int xPosition
+final int yPosition
 --
 getTerrain() :Terrain
 getEntity() :Entity 
@@ -185,7 +186,7 @@ Testing:</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>900</x>
+      <x>837</x>
       <y>981</y>
       <w>189</w>
       <h>180</h>
@@ -210,7 +211,7 @@ Testing:</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>675</x>
+      <x>612</x>
       <y>981</y>
       <w>189</w>
       <h>153</h>
@@ -233,7 +234,7 @@ Testing:</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1116</x>
+      <x>1053</x>
       <y>981</y>
       <w>189</w>
       <h>144</h>
@@ -255,7 +256,7 @@ Testing:</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>585</x>
+      <x>522</x>
       <y>261</y>
       <w>171</w>
       <h>90</h>
@@ -266,7 +267,7 @@ Testing:</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>810</x>
+      <x>747</x>
       <y>261</y>
       <w>27</w>
       <h>90</h>
@@ -277,7 +278,7 @@ Testing:</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
+      <x>837</x>
       <y>261</y>
       <w>162</w>
       <h>90</h>
@@ -288,7 +289,7 @@ Testing:</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>864</x>
+      <x>801</x>
       <y>675</y>
       <w>153</w>
       <h>45</h>
@@ -304,7 +305,7 @@ Aggregation
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1143</x>
+      <x>1080</x>
       <y>846</y>
       <w>90</w>
       <h>153</h>
@@ -320,7 +321,7 @@ Composition
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>855</x>
+      <x>792</x>
       <y>846</y>
       <w>162</w>
       <h>153</h>
@@ -336,7 +337,7 @@ Composition
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1035</x>
+      <x>972</x>
       <y>846</y>
       <w>90</w>
       <h>153</h>
@@ -351,7 +352,7 @@ Composition</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>243</x>
+      <x>180</x>
       <y>828</y>
       <w>459</w>
       <h>162</h>
@@ -367,7 +368,7 @@ Aggregation (lists one or more)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>63</x>
+      <x>0</x>
       <y>675</y>
       <w>189</w>
       <h>198</h>
@@ -393,7 +394,7 @@ Testing:</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>153</x>
+      <x>90</x>
       <y>864</y>
       <w>90</w>
       <h>90</h>
@@ -409,7 +410,7 @@ controls one
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>306</x>
+      <x>243</x>
       <y>288</y>
       <w>189</w>
       <h>171</h>
@@ -433,7 +434,7 @@ Testing:</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>486</x>
+      <x>423</x>
       <y>423</y>
       <w>90</w>
       <h>27</h>
@@ -444,7 +445,7 @@ Testing:</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>297</x>
+      <x>234</x>
       <y>0</y>
       <w>1053</w>
       <h>1224</h>
@@ -457,7 +458,7 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>423</x>
+      <x>360</x>
       <y>450</y>
       <w>135</w>
       <h>279</h>
@@ -470,7 +471,7 @@ Association (has a)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>675</x>
+      <x>612</x>
       <y>855</y>
       <w>198</w>
       <h>144</h>
@@ -486,7 +487,7 @@ Aggregation (lists one or more)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>486</x>
+      <x>423</x>
       <y>450</y>
       <w>162</w>
       <h>207</h>
@@ -499,7 +500,7 @@ m2=provide
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>639</x>
+      <x>576</x>
       <y>549</y>
       <w>90</w>
       <h>81</h>
@@ -512,7 +513,7 @@ m2=provide
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>945</x>
+      <x>882</x>
       <y>495</y>
       <w>90</w>
       <h>126</h>
@@ -525,7 +526,7 @@ m2=provide
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>810</x>
+      <x>747</x>
       <y>522</y>
       <w>99</w>
       <h>90</h>
@@ -538,7 +539,7 @@ m2=provide
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>576</x>
+      <x>513</x>
       <y>639</y>
       <w>126</w>
       <h>126</h>
@@ -551,7 +552,7 @@ m1=require
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>846</x>
+      <x>783</x>
       <y>585</y>
       <w>117</w>
       <h>108</h>
@@ -564,7 +565,7 @@ m1=require
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>666</x>
+      <x>603</x>
       <y>612</y>
       <w>72</w>
       <h>99</h>
@@ -577,7 +578,7 @@ m1=require
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>315</x>
+      <x>252</x>
       <y>711</y>
       <w>225</w>
       <h>153</h>
@@ -600,7 +601,7 @@ Testing: </panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>522</x>
+      <x>459</x>
       <y>783</y>
       <w>81</w>
       <h>45</h>
@@ -613,7 +614,7 @@ m2=provide
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>585</x>
+      <x>522</x>
       <y>783</y>
       <w>117</w>
       <h>45</h>
@@ -626,7 +627,7 @@ m1=require
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>801</x>
+      <x>738</x>
       <y>594</y>
       <w>72</w>
       <h>99</h>
