@@ -17,10 +17,10 @@ Map (final, Singleton)
 + move(:Entity, :2DVector)
 --
 *Rationale*
--- Avatar(s) reside here
--- List of Entities resides here
--- 2D array of Tiles in here
--- Represents the game world
+* Avatar(s) reside here
+* List of Entities resides here
+* 2D array of Tiles in here
+* Represents the game world
 --
 Implemention:
 Testing:</panel_attributes>
@@ -175,7 +175,7 @@ getEntity() :Entity
 getTopmostItem() :Item  
 --
 *Rationale*
--- Represents one tile on the 
+* Represents one tile on the 
 map.
 --
 Implemention:
@@ -188,7 +188,7 @@ Testing:</panel_attributes>
       <x>900</x>
       <y>981</y>
       <w>189</w>
-      <h>171</h>
+      <h>180</h>
     </coordinates>
     <panel_attributes>
 Item
@@ -213,7 +213,7 @@ Testing:</panel_attributes>
       <x>675</x>
       <y>981</y>
       <w>189</w>
-      <h>171</h>
+      <h>153</h>
     </coordinates>
     <panel_attributes>
 Entity
@@ -236,7 +236,7 @@ Testing:</panel_attributes>
       <x>1116</x>
       <y>981</y>
       <w>189</w>
-      <h>171</h>
+      <h>144</h>
     </coordinates>
     <panel_attributes>
 Terrain
@@ -422,7 +422,7 @@ MapAvatarInterface
 + inspect(: 2D vector) :String
 --
 *Rationale*
--- Contains function prototypes
+* Contains function prototypes
 than an Avatar can use to 
 call the map
 --
