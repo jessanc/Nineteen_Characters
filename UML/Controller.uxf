@@ -28,9 +28,10 @@ Responsibilities
       <w>210</w>
       <h>190</h>
     </coordinates>
-    <panel_attributes>DrawableThing (abtract)
+    <panel_attributes>DrawableThing (abtsract)
 --
-
++ name_ :String
++ position_ : 2DVector
 --
 
 --
