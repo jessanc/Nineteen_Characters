@@ -63,7 +63,7 @@ public final class Map implements Serializable, MapDrawableThingInterface,
     private MapTile map_grid_[][];
 
     // currently there is only one avatar
-    private static final Avatar avatar_ = new Avatar("avatar", 'x', false, 0, 0);
+    private static final Avatar avatar_ = new Avatar("avatar", 'x', 0, 0);
 
     public static Avatar getAvatar(String name) {
         return avatar_;
