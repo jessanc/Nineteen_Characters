@@ -27,10 +27,6 @@ abstract public class Entity extends DrawableThing {
         map_relationship_ = new MapEntityAssociation(Map.getMyInterfaceWithTheMap(this), 
                 this, x_respawn_point, y_respawn_point);
     }
-
-    // height and width values must be odd to be symmetrical with respect to center.
-    private final int height_ = 1; // default size is 1 tile
-    private final int width_ = 1; //default size is 1 tile
     
     public Entity(String name, char representation, 
             int x, int y) {
