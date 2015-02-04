@@ -1,112 +1,139 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="13.1">
-  <zoom_level>10</zoom_level>
+  <zoom_level>20</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>620</x>
-      <y>260</y>
-      <w>210</w>
-      <h>190</h>
+      <x>920</x>
+      <y>600</y>
+      <w>420</w>
+      <h>540</h>
     </coordinates>
-    <panel_attributes>Display
+    <panel_attributes>
+Display
 --
-
++ avatar_ :Avatar
++ viewport_ :Viewport 
 --
-
++ generateMapView()
++ generateStatsView()
++ generateAvatarCreationView()
++ printView()
 --
-Responsibilities
--- 
-*-- </panel_attributes>
+*Rationale*
+* Displays views and
+manipulates the screen
+* Allows for side-by-side and
+interchangeable views
+--
+Implementing: Matthew B.
+Testing: Jack C.</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1010</x>
-      <y>260</y>
-      <w>210</w>
-      <h>190</h>
+      <x>1700</x>
+      <y>600</y>
+      <w>420</w>
+      <h>380</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;interface&gt;&gt;
-View
+    <panel_attributes>
+Viewport (abstract)
 --
-
++ Screen :2DArray(Char)
 --
-
++ getScreen() :2DArray
++ render()
 --
-Responsibilities
--- 
-*-- </panel_attributes>
+*Rationale*
+* Represents a frame to be
+included in the display
+--
+Implementing: Matthew B.
+Testing: Jack C.</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>810</x>
-      <y>550</y>
-      <w>210</w>
-      <h>190</h>
+      <x>1300</x>
+      <y>1180</y>
+      <w>420</w>
+      <h>380</h>
     </coordinates>
-    <panel_attributes>StatsView
+    <panel_attributes>StatsView (package private)
 --
-
++ avatar_ :Avatar
 --
-
+@ Override
++ render()
 --
-Responsibilities
--- 
-*-- </panel_attributes>
+*Rationale*
+* View that renders the avatar's
+stats and inventory
+--
+Implementing: Matthew B.
+Testing: Jack C.</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1060</x>
-      <y>550</y>
-      <w>210</w>
-      <h>190</h>
+      <x>1800</x>
+      <y>1180</y>
+      <w>420</w>
+      <h>380</h>
     </coordinates>
-    <panel_attributes>MapView
+    <panel_attributes>MapView (package private)
 --
-
++ map_ :Map
++ view_position_ :2DVector
 --
-
+@ Override
++ render()
 --
-Responsibilities
--- 
-*-- </panel_attributes>
+*Rationale*
+* View that renders the 
+game world
+--
+Implementing: Matthew B.
+Testing: Jack C.</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1310</x>
-      <y>550</y>
-      <w>210</w>
-      <h>190</h>
+      <x>2300</x>
+      <y>1180</y>
+      <w>540</w>
+      <h>380</h>
     </coordinates>
-    <panel_attributes>CharacterView
+    <panel_attributes>AvatarCreationView (package private)
 --
-
++ avatar_ :Avatar
 --
-
+@ Override
++ render()
 --
-Responsibilities
--- 
-*-- </panel_attributes>
+*Rationale*
+* View that renders the creation screen
+--
+Implementing: Matthew B.
+Testing: Jack C.</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>820</x>
-      <y>290</y>
-      <w>210</w>
-      <h>50</h>
+      <x>1320</x>
+      <y>660</y>
+      <w>420</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 lt=&lt;&lt;&lt;&lt;-
+contains the
 m1=1
 m2=1
 </panel_attributes>
@@ -115,10 +142,10 @@ m2=1
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>590</x>
-      <y>140</y>
-      <w>980</w>
-      <h>620</h>
+      <x>860</x>
+      <y>360</y>
+      <w>2000</w>
+      <h>1240</h>
     </coordinates>
     <panel_attributes>View
 --
@@ -128,139 +155,112 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>890</x>
-      <y>480</y>
-      <w>100</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>lt=)-
-m1=require
-</panel_attributes>
-    <additional_attributes>50.0;20.0;10.0;70.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1200</x>
-      <y>440</y>
-      <w>90</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=-()
-m2=provide
-</panel_attributes>
-    <additional_attributes>10.0;10.0;70.0;30.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1070</x>
-      <y>480</y>
-      <w>80</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>lt=)-
-m1=require
-</panel_attributes>
-    <additional_attributes>20.0;20.0;20.0;70.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1270</x>
-      <y>450</y>
-      <w>190</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>lt=)-
-m1=require
-</panel_attributes>
-    <additional_attributes>20.0;20.0;170.0;100.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>930</x>
-      <y>440</y>
-      <w>130</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>lt=-()
-m2=provide
-</panel_attributes>
-    <additional_attributes>110.0;10.0;10.0;40.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1080</x>
-      <y>440</y>
-      <w>80</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>lt=-()
-m2=provide
-</panel_attributes>
-    <additional_attributes>30.0;10.0;10.0;40.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>900</x>
-      <y>730</y>
-      <w>40</w>
-      <h>210</h>
+      <x>1480</x>
+      <y>1540</y>
+      <w>380</w>
+      <h>420</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 lt=&lt;&lt;&lt;&lt;-
 m1=1
 m2=1
-A</panel_attributes>
+References Avatar
+(recieves ref from Display)</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1140</x>
-      <y>730</y>
-      <w>40</w>
-      <h>210</h>
+      <x>1960</x>
+      <y>1540</y>
+      <w>400</w>
+      <h>420</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 lt=&lt;&lt;&lt;&lt;-
 m1=1
 m2=1
-B</panel_attributes>
+References Map 
+(potentially via an interface)</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1390</x>
-      <y>730</y>
-      <w>40</w>
-      <h>200</h>
+      <x>2460</x>
+      <y>1540</y>
+      <w>380</w>
+      <h>400</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 lt=&lt;&lt;&lt;&lt;-
 m1=1
 m2=1
-C</panel_attributes>
+References Avatar
+(recieves ref from Display)</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>20</x>
-      <y>20</y>
-      <w>620</w>
-      <h>300</h>
+      <x>80</x>
+      <y>540</y>
+      <w>880</w>
+      <h>640</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;
-lt=&lt;&lt;&lt;&lt;-
-m1=1
+    <panel_attributes>lt=&lt;-
+is associated with one
+m1=1 (Avatar)
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;420.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>180</y>
+      <w>780</w>
+      <h>460</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+lt=-&gt;
+has one
+m1=1 (Avatar)
 m2=1
-D</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;280.0;600.0;280.0</additional_attributes>
+</panel_attributes>
+    <additional_attributes>10.0;10.0;370.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1500</x>
+      <y>960</y>
+      <w>240</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1880</x>
+      <y>960</y>
+      <w>160</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2100</x>
+      <y>960</y>
+      <w>500</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;230.0;110.0</additional_attributes>
   </element>
 </diagram>
