@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>20</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>920</x>
+      <y>600</y>
+      <w>420</w>
+      <h>540</h>
+    </coordinates>
+    <panel_attributes>
+Display
+--
++ avatar_ :Avatar
++ viewport_ :Viewport 
+--
++ generateMapView()
++ generateStatsView()
++ generateAvatarCreationView()
++ printView()
+--
+*Rationale*
+* Displays views and
+manipulates the screen
+* Allows for side-by-side and
+interchangeable views
+--
+Implementing: Matthew B.
+Testing: Jack C.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1700</x>
+      <y>600</y>
+      <w>420</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>
+Viewport (abstract)
+--
++ Screen :2DArray(Char)
+--
++ getScreen() :2DArray
++ render()
+--
+*Rationale*
+* Represents a frame to be
+included in the display
+--
+Implementing: Matthew B.
+Testing: Jack C.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1300</x>
+      <y>1180</y>
+      <w>420</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>StatsView (package private)
+--
++ avatar_ :Avatar
+--
+@ Override
++ render()
+--
+*Rationale*
+* View that renders the avatar's
+stats and inventory
+--
+Implementing: Matthew B.
+Testing: Jack C.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1800</x>
+      <y>1180</y>
+      <w>420</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>MapView (package private)
+--
++ map_ :Map
++ view_position_ :2DVector
+--
+@ Override
++ render()
+--
+*Rationale*
+* View that renders the 
+game world
+--
+Implementing: Matthew B.
+Testing: Jack C.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2300</x>
+      <y>1180</y>
+      <w>540</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>AvatarCreationView (package private)
+--
++ avatar_ :Avatar
+--
+@ Override
++ render()
+--
+*Rationale*
+* View that renders the creation screen
+--
+Implementing: Matthew B.
+Testing: Jack C.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1320</x>
+      <y>660</y>
+      <w>420</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+lt=&lt;&lt;&lt;&lt;-
+contains the
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>860</x>
+      <y>360</y>
+      <w>2000</w>
+      <h>1240</h>
+    </coordinates>
+    <panel_attributes>View
+--
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1480</x>
+      <y>1540</y>
+      <w>380</w>
+      <h>420</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+References Avatar
+(recieves ref from Display)</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1960</x>
+      <y>1540</y>
+      <w>400</w>
+      <h>420</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+References Map 
+(potentially via an interface)</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2460</x>
+      <y>1540</y>
+      <w>380</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+References Avatar
+(recieves ref from Display)</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>80</x>
+      <y>540</y>
+      <w>880</w>
+      <h>640</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+is associated with one
+m1=1 (Avatar)
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;420.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>180</y>
+      <w>780</w>
+      <h>460</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+lt=-&gt;
+has one
+m1=1 (Avatar)
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;370.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1500</x>
+      <y>960</y>
+      <w>240</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1880</x>
+      <y>960</y>
+      <w>160</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2100</x>
+      <y>960</y>
+      <w>500</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;230.0;110.0</additional_attributes>
+  </element>
+</diagram>

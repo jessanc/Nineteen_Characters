@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>413</x>
+      <y>427</y>
+      <w>147</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>
+Terrain
+--
+
+--
+
+--
+*Rationale*
+ * Represents terrain
+--
+Implemention:
+Testing:</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>658</x>
+      <y>161</y>
+      <w>147</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>DrawableThing (abtsract)
+--
++ name_ :String
++ position_ : 2DVector
+
+--
++ healWithinRadius(:DrawableThing, :Int, :Int)
++ hurtWithinRadius(:DrawableThing, :Int, :Int)
++ killWithinRadius(:DrawableThing, :Boolean)
++ levelUpWithinRadius(:DrawableThing, :Boolean)
+--
+*Rationale*
+
+Drawable things share common
+attributes and fucntions, some of
+which can be implemented 
+concretely. Thus, an abstract 
+class makes sense
+
+* Implements Serializable
+--
+Implemention:
+Testing:</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>623</x>
+      <y>434</y>
+      <w>147</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>
+Entity
+--
+
+--
+
+--
+*Rationale*
+* Represents a living, moving
+thing
+--
+Implemention:
+Testing:</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>952</x>
+      <y>420</y>
+      <w>147</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>
+Item
+--
+isOneShot_:Boolean
+isTakeable_:Boolean
+--
+
+--
+*Rationale*
+* Non living thing that can't 
+move
+
+--
+Implemention:
+Testing:</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>574</y>
+      <w>147</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+OccupationInterface
+--
+
+--
+
+--
+*Rationale*
+Allows for entities to do specific moves based on what 
+occupation
+they choose, to enable the class
+system
+
+--
+Implemention:
+Testing:</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>658</x>
+      <y>770</y>
+      <w>147</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Summoner
+--
+
+--
+
+--
+*Rationale*
+
+Occupation for sneak
+An entity becomes a sneak if they implement this
+
+--
+Implemention:
+Testing:</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>833</x>
+      <y>770</y>
+      <w>147</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Smasher
+--
+
+--
+
+--
+*Rationale*
+Occupation for smasher
+An entity becomes a smasher 
+if they implement this
+
+--
+Implemention:
+Testing:</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1008</x>
+      <y>770</y>
+      <w>147</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Sneak
+--
+
+--
+
+--
+*Rationale*
+
+Occupation for sneak
+An entity becomes a sneak if they implement this
+
+--
+Implemention:
+Testing:</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>728</y>
+      <w>77</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=)-
+m1=require
+</panel_attributes>
+    <additional_attributes>80.0;20.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>763</x>
+      <y>714</y>
+      <w>91</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+m2=provide
+</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>861</x>
+      <y>714</y>
+      <w>63</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+m2=provide
+</panel_attributes>
+    <additional_attributes>40.0;10.0;70.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>966</x>
+      <y>700</y>
+      <w>63</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+m2=provide
+</panel_attributes>
+    <additional_attributes>30.0;10.0;70.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1015</x>
+      <y>714</y>
+      <w>98</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=)-
+m1=require
+</panel_attributes>
+    <additional_attributes>20.0;20.0;120.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>896</x>
+      <y>735</y>
+      <w>56</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=)-
+m1=require
+</panel_attributes>
+    <additional_attributes>20.0;20.0;20.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>763</x>
+      <y>553</y>
+      <w>91</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+lt=&lt;&lt;&lt;&lt;-
+has an
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>280</y>
+      <w>182</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>240.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>665</x>
+      <y>378</y>
+      <w>70</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>749</x>
+      <y>378</y>
+      <w>231</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;310.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>567</x>
+      <y>602</y>
+      <w>147</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>
+Avatar(final)
+--
+
+--
+inspect(:2DVector) :String
+--
+*Rationale*
+* The avatar reference
+* Allows things to interact with
+the player
+--
+Implemention:
+Testing:</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>686</x>
+      <y>560</y>
+      <w>21</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>371</x>
+      <y>77</y>
+      <w>875</w>
+      <h>875</h>
+    </coordinates>
+    <panel_attributes>Controller
+--
+
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>924</x>
+      <y>217</y>
+      <w>147</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>StatsPack (struct, final)
+--
+
+--
+
+--
+*Rationale*
+
+*-- Aggregrate of stats
+--
+Implemention:
+Testing:
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>798</x>
+      <y>231</y>
+      <w>140</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+lt=&lt;&lt;&lt;&lt;-
+has a (const)
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>763</x>
+      <y>301</y>
+      <w>175</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+lt=&lt;&lt;&lt;&lt;-
+ (modifiable)
+[composition]
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;220.0;230.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1092</x>
+      <y>84</y>
+      <w>126</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+has a MapItem
+(see model)
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;480.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>385</x>
+      <y>91</y>
+      <w>105</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+has a MapTerrain
+(see model)
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;480.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>91</y>
+      <w>259</w>
+      <h>357</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+has a MapEntity
+    (see model)
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;350.0;490.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>371</x>
+      <y>728</y>
+      <w>224</w>
+      <h>238</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+has a MapAvatarInterface
+(see model)
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;320.0;280.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>378</x>
+      <y>623</y>
+      <w>147</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>
+AvatarController
+--
+- avatar_ :Avatar
+- display_ :Display
+--
++ handleAttack(:2DVector)
++ handleInteract(:2DVector)
++ handleMove(:2DVector)
++ handleUse(:2DVector)
+--
+*Rationale*
+* Handles keyboard input
+--
+Implemention:
+Testing:</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>399</x>
+      <y>595</y>
+      <w>182</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+lt=-&gt;&gt;&gt;&gt;
+m1=1
+m2=1
+controls one
+</panel_attributes>
+    <additional_attributes>240.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>595</x>
+      <y>728</y>
+      <w>84</w>
+      <h>238</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+lt=-&gt;
+has one
+m1=1
+m2=1 (Display)
+</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;320.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>721</x>
+      <y>84</y>
+      <w>119</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+is associated with a
+m1=1 (MapDrawable)
+m2=1</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+</diagram>
