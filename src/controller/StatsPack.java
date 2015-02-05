@@ -60,7 +60,7 @@ public final class StatsPack implements Serializable {
         current_defensive_rating_ = 0;
         current_armor_rating_ = 0;
     }
-
+/*
     StatsPack(
             int lives_left,
             int strength_level,
@@ -102,7 +102,7 @@ public final class StatsPack implements Serializable {
         current_defensive_rating_ = current_defensive_rating;
         current_armor_rating_ = current_armor_rating;
     }
-
+*/
     /**
      * This function is for when one DrawableThing modifies [increases] the
      * stats of another DrawableThing.

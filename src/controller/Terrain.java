@@ -5,8 +5,7 @@
  */
 package src.controller;
 
-import src.model.Map;
-import src.model.MapTerrainInterface;
+import src.model.MapTerrain_Association;
 
 /**
  *
@@ -18,14 +17,14 @@ public class Terrain extends DrawableThing {
     private static final long serialVersionUID = Long.parseLong("Terrain", 35);
 
     // map_relationship_ is used in place of a map_referance_
-    private MapTerrainInterface map_relationship_;
+    private MapTerrain_Association map_relationship_;
 
     /**
      * This function is necessary because the constructor cannot safely build
      * the map_relationship. Make sure that this function uses a subclass this.
      */
     private void initializeMapRelationship() {
-        map_relationship_ = Map.getMyInterfaceWithTheMap(this);
+        map_relationship_ = new MapTerrain_Association(this);
     }
 
     public enum Color {

@@ -20,7 +20,6 @@ final class AvatarCreationView extends Viewport
 
     private final Avatar avatar_reference_;
 
-    
     /*
      * Generates a new ChaAvatarCreationViewses avatar_reference_ to modify the avatar.
      */
