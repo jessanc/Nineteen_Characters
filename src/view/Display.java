@@ -8,8 +8,7 @@ package src.view;
 import java.io.Serializable;
 import java.util.Arrays;
 import src.controller.Avatar;
-import src.model.Map;
-import src.model.MapDisplayInterface;
+import src.model.MapDisplay_Association;
 /**
  * Represents a single player's display
  * @author JohnReedLOL
@@ -21,14 +20,14 @@ public class Display implements Serializable
     
 
     // map_relationship_ is used in place of a map_referance_
-    private MapDisplayInterface map_relationship_;
+    private MapDisplay_Association map_relationship_;
 
     /**
      * This function is necessary because the constructor cannot safely build
      * the map_relationship. Make sure that this function uses a subclass this.
      */
     private void initializeMapRelationship() {
-        map_relationship_ = Map.getMyInterfaceWithTheMap(this);
+        map_relationship_ = new MapDisplay_Association(this);
     }
     
     private final Avatar referance_to_the_player_whose_screen_I_am_displaying_;

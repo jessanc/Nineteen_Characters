@@ -5,8 +5,7 @@
  */
 
 package src.controller;
-import src.view.Display;
-import src.model.Map;
+import src.model.MapAvatar_Association;
 /**
  * Uses keyboard input to control the avatar
  * @author JohnReedLOL
@@ -14,8 +13,6 @@ import src.model.Map;
 public final class AvatarController
 {
     // my avatar
-    private final Avatar avatar_reference_ = src.model.Map.getAvatar("avatar");
+    private final Avatar avatar_reference_ = MapAvatar_Association.getAvatarByName("avatar");
     
-    // This display corresponds to that avatar.
-    private Display display_ = new Display(avatar_reference_);
 }

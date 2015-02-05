@@ -51,4 +51,12 @@ public final class MapTile implements Serializable {
     public Item getTopItem() {
         return this.items_.peekLast();
     }
+    
+    /**
+     * Checks the tile to find its character representation
+     * @return the character that will represent this tile on the map
+     */
+    public char getTopCharacter() {
+        return 0;
+    }
 }

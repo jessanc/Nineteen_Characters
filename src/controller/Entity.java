@@ -5,8 +5,7 @@
  */
 package src.controller;
 
-import src.model.Map;
-import src.model.MapEntityAssociation;
+import src.model.MapEntity_Association;
 /**
  *
  * @author JohnReedLOL
@@ -17,21 +16,12 @@ abstract public class Entity extends DrawableThing {
     private static final long serialVersionUID = Long.parseLong("Entity", 35);
 
     // map_relationship_ is used in place of a map_referance_
-    private MapEntityAssociation map_relationship_;
-
-    /**
-     * This function is necessary because the constructor cannot safely build
-     * the map_relationship. Make sure that this function uses a subclass this.
-     */
-    private void initializeMapRelationship(int x_respawn_point, int y_respawn_point) {
-        map_relationship_ = new MapEntityAssociation(Map.getMyInterfaceWithTheMap(this), 
-                this, x_respawn_point, y_respawn_point);
-    }
+    private final MapEntity_Association map_relationship_;
     
     public Entity(String name, char representation, 
             int x, int y) {
         super(name, representation);
-        initializeMapRelationship(x, y);
+        map_relationship_ = new MapEntity_Association( this, x, y );
     }
 
     Item inventory_[];
@@ -49,14 +39,6 @@ abstract public class Entity extends DrawableThing {
 
     public void levelUp() {
 
-    }
-
-    public int getMyXCordinate() {
-        return super.getMyTile().x_;
-    }
-
-    public int getMyYCordinate() {
-        return super.getMyTile().y_;
     }
     public void moveBy(int x, int y) {
         //map_relationship_.moveInDirection(this, x, y);
