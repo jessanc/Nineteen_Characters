@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="13.1">
-  <zoom_level>6</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>570</x>
-      <y>600</y>
-      <w>126</w>
-      <h>126</h>
+      <x>528</x>
+      <y>552</y>
+      <w>168</w>
+      <h>168</h>
     </coordinates>
     <panel_attributes>
 Map (final, Singleton)
@@ -29,15 +29,15 @@ Testing:</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>624</x>
-      <y>282</y>
-      <w>150</w>
-      <h>150</h>
+      <x>440</x>
+      <y>272</y>
+      <w>200</w>
+      <h>264</h>
     </coordinates>
     <panel_attributes>&lt;&lt;association class&gt;
-MapEntity
+MapEntity_Association
 --
-
+* See DrawableThing for functions *
 --
 + sendAttack(:Entity, :2DVector) : Int
 + receiveAttack(:Entity, :2DVector) : Int
@@ -47,9 +47,11 @@ MapEntity
 + use(:Item)
 --
 Rationale:
-* Contains functions
+* Contains functions that
 than an Entity can use to 
-manipulate map
+manipulate the map as well as 
+variables relavent to those
+functions 
 --
 Implementation: 
 Testing: </panel_attributes>
@@ -58,24 +60,27 @@ Testing: </panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>792</x>
-      <y>282</y>
-      <w>126</w>
-      <h>132</h>
+      <x>664</x>
+      <y>296</y>
+      <w>168</w>
+      <h>232</h>
     </coordinates>
     <panel_attributes>&lt;&lt;association class&gt;&gt;
-MapItem
+MapItem_Association 
 --
-
+isOneShot_:Boolean
+isTakeable_:Boolean
 --
 + activate(:Item)
 + activate(:Item, :Item)
 + activate(:Item, :Entity)
 --
 *Rationale:*
-* Contains function prototypes
+* Contains functions that
 than an Item can use to 
-manipulate map
+manipulate the map as well as 
+variables relavent to those
+functions 
 --
 Implementation:
 Testing: </panel_attributes>
@@ -84,22 +89,24 @@ Testing: </panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>930</x>
-      <y>282</y>
-      <w>126</w>
-      <h>114</h>
+      <x>848</x>
+      <y>296</y>
+      <w>232</w>
+      <h>224</h>
     </coordinates>
     <panel_attributes>&lt;&lt;association class&gt;&gt;
-MapTerrain
+MapTerrain_Association
 --
 
 --
 + checkIfBlocked(:Terrain, :Entity) :bool
 --
 *Rationale:*
-* Contains function prototypes
-than an Avatar can use to 
-manipulate the map
+* References the map 
+(package private) and a Terrain.
+Contains functions which that
+terrain can use to 
+manipulate the map. 
 --
 Implementation: 
 Testing: </panel_attributes>
@@ -108,22 +115,21 @@ Testing: </panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>294</x>
-      <y>684</y>
-      <w>126</w>
-      <h>114</h>
+      <x>0</x>
+      <y>832</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>
 Avatar(final)
 --
-
+* See package controller *
+- display_ :Display
 --
 inspect(:2DVector) :String
 --
 *Rationale*
-* The avatar reference
-* Allows things to interact with
-the player
+
 --
 Implemention:
 Testing:</panel_attributes>
@@ -132,24 +138,26 @@ Testing:</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>978</x>
-      <y>144</y>
-      <w>126</w>
-      <h>120</h>
+      <x>912</x>
+      <y>112</y>
+      <w>200</w>
+      <h>176</h>
     </coordinates>
     <panel_attributes>
 MapTile
 --
-final int xPosition
-final int yPosition
++ final int xPosition
++ final int yPosition
 --
-getTerrain() :Terrain
-getEntity() :Entity 
-getTopmostItem() :Item  
++ getTerrain() :Terrain
++ getEntity() :Entity 
++ getTopmostItem() :Item  
 --
 *Rationale*
 * Represents one tile on the 
-map.
+map. Tile position is public 
+because it is read-only 
+non-vulnerable information.
 --
 Implemention:
 Testing:</panel_attributes>
@@ -158,16 +166,15 @@ Testing:</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>792</x>
-      <y>900</y>
-      <w>126</w>
-      <h>120</h>
+      <x>656</x>
+      <y>808</y>
+      <w>168</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>
 Item
 --
-isOneShot_:Boolean
-isTakeable_:Boolean
+* See package controller *
 --
 
 --
@@ -183,15 +190,15 @@ Testing:</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>648</x>
-      <y>900</y>
-      <w>126</w>
-      <h>102</h>
+      <x>320</x>
+      <y>808</y>
+      <w>168</w>
+      <h>136</h>
     </coordinates>
     <panel_attributes>
 Entity
 --
-
+* See package controller *
 --
 
 --
@@ -206,15 +213,15 @@ Testing:</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>930</x>
-      <y>900</y>
-      <w>126</w>
-      <h>96</h>
+      <x>848</x>
+      <y>800</y>
+      <w>168</w>
+      <h>128</h>
     </coordinates>
     <panel_attributes>
 Terrain
 --
-
+* See package controller *
 --
 
 --
@@ -228,43 +235,43 @@ Testing:</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>642</x>
-      <y>222</y>
-      <w>162</w>
-      <h>72</h>
+      <x>464</x>
+      <y>232</y>
+      <w>144</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>250.0;10.0;10.0;100.0</additional_attributes>
+    <additional_attributes>160.0;10.0;10.0;50.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>786</x>
-      <y>222</y>
-      <w>30</w>
-      <h>72</h>
+      <x>664</x>
+      <y>232</y>
+      <w>32</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;30.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;20.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>786</x>
-      <y>222</y>
-      <w>174</w>
-      <h>72</h>
+      <x>856</x>
+      <y>136</y>
+      <w>32</w>
+      <h>176</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;270.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;20.0;200.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1026</x>
-      <y>390</y>
-      <w>18</w>
-      <h>522</h>
+      <x>976</x>
+      <y>512</y>
+      <w>24</w>
+      <h>304</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
@@ -272,15 +279,15 @@ m1=1
 m2=1
 
 </panel_attributes>
-    <additional_attributes>10.0;850.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;360.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>750</x>
-      <y>426</y>
-      <w>18</w>
-      <h>486</h>
+      <x>456</x>
+      <y>528</y>
+      <w>32</w>
+      <h>296</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
@@ -288,15 +295,15 @@ m1=1
 m2=1
 
 </panel_attributes>
-    <additional_attributes>10.0;790.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;350.0;20.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>870</x>
-      <y>408</y>
-      <w>30</w>
-      <h>504</h>
+      <x>760</x>
+      <y>520</y>
+      <w>24</w>
+      <h>304</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
@@ -304,15 +311,15 @@ m1=1
 
 m2=1
 </panel_attributes>
-    <additional_attributes>10.0;820.0;30.0;10.0</additional_attributes>
+    <additional_attributes>10.0;360.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>414</x>
-      <y>696</y>
-      <w>168</w>
-      <h>30</h>
+      <x>160</x>
+      <y>688</y>
+      <w>384</w>
+      <h>192</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 lt=&lt;&lt;&lt;&lt;-
@@ -320,21 +327,20 @@ m1=1
 m2=1..n
 Aggregation (lists one or more)
 </panel_attributes>
-    <additional_attributes>260.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>460.0;10.0;10.0;220.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>294</x>
-      <y>510</y>
-      <w>126</w>
-      <h>132</h>
+      <x>0</x>
+      <y>600</y>
+      <w>168</w>
+      <h>176</h>
     </coordinates>
     <panel_attributes>
 AvatarController
 --
 - avatar_ :Avatar
-- display_ :Display
 --
 + handleAttack(:2DVector)
 + handleInteract(:2DVector)
@@ -351,10 +357,10 @@ Testing:</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>354</x>
-      <y>636</y>
-      <w>60</w>
-      <h>60</h>
+      <x>80</x>
+      <y>768</y>
+      <w>80</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 lt=-&gt;&gt;&gt;&gt;
@@ -367,21 +373,23 @@ controls one
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>468</x>
-      <y>324</y>
-      <w>126</w>
-      <h>114</h>
+      <x>232</x>
+      <y>352</y>
+      <w>168</w>
+      <h>184</h>
     </coordinates>
     <panel_attributes>&lt;&lt;association class&gt;&gt;
-MapAvatar
+MapAvatar_Association
 --
 --
 + inspect(: 2D vector) :String
 --
 *Rationale*
-* Contains function prototypes
+* Contains functions that
 than an Avatar can use to 
-call the map
+manipulate the map as well as 
+variables relavent to those
+functions 
 --
 Implemntation:
 Testing:</panel_attributes>
@@ -390,10 +398,10 @@ Testing:</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>450</x>
-      <y>60</y>
-      <w>702</w>
-      <h>816</h>
+      <x>208</x>
+      <y>0</y>
+      <w>936</w>
+      <h>792</h>
     </coordinates>
     <panel_attributes>Model
 --
@@ -401,38 +409,26 @@ bg=orange</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>654</x>
-      <y>222</y>
-      <w>258</w>
-      <h>390</h>
-    </coordinates>
-    <panel_attributes>
-
-</panel_attributes>
-    <additional_attributes>10.0;630.0;210.0;450.0;210.0;90.0;410.0;10.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>792</x>
-      <y>108</y>
-      <w>126</w>
-      <h>120</h>
+      <x>592</x>
+      <y>32</y>
+      <w>272</w>
+      <h>208</h>
     </coordinates>
     <panel_attributes>&lt;&lt;association class&gt;&gt;
-MapDrawable
+MapDrawableThing_Association
 --
 _map:Map
 _tile:Tile
 --
-
+*See corresponding class DrawableThing*
 --
 *Rationale:*
-* Contains function prototypes
-than an Avatar can use to 
-manipulate the map
+* References the (package private) map 
+and containsfunctionality common to 
+MapEntity, MapItem, and MapTerrain.
+* Only Map associations can contain map references.
 --
 Implementation: 
 Testing: </panel_attributes>
@@ -441,10 +437,10 @@ Testing: </panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>912</x>
-      <y>132</y>
-      <w>144</w>
-      <h>36</h>
+      <x>800</x>
+      <y>24</y>
+      <w>216</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
@@ -452,15 +448,15 @@ m1=1
 m2=1
 
 </panel_attributes>
-    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
+    <additional_attributes>10.0;10.0;250.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>588</x>
-      <y>288</y>
-      <w>48</w>
-      <h>48</h>
+      <x>392</x>
+      <y>304</y>
+      <w>64</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>60.0;10.0;10.0;60.0</additional_attributes>
@@ -468,14 +464,25 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>390</x>
-      <y>432</y>
-      <w>132</w>
-      <h>90</h>
+      <x>128</x>
+      <y>528</y>
+      <w>176</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
 (knows a)</panel_attributes>
-    <additional_attributes>200.0;10.0;10.0;130.0</additional_attributes>
+    <additional_attributes>200.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>648</x>
+      <y>232</y>
+      <w>24</w>
+      <h>336</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;400.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
