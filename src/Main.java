@@ -6,9 +6,9 @@ package src;
  * and open the template in the editor.
  */
 
-/**
+/** 
  * Initializes, opens the program.
- * @author JohnReedLOL
+ * @author JohnReedLOL.
  */
 public class Main
 {
