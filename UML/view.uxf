@@ -27,7 +27,7 @@ manipulates the screen
 interchangeable views
 --
 Implementing: Matthew B.
-Testing: Jack C.</panel_attributes>
+Testing: Alex</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -51,16 +51,16 @@ Viewport (abstract)
 included in the display
 --
 Implementing: Matthew B.
-Testing: Jack C.</panel_attributes>
+Testing: Alex</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>488</x>
+      <x>496</x>
       <y>400</y>
       <w>168</w>
-      <h>152</h>
+      <h>160</h>
     </coordinates>
     <panel_attributes>StatsView (package private)
 --
@@ -73,8 +73,9 @@ Testing: Jack C.</panel_attributes>
 * View that renders the avatar's
 stats and inventory
 --
-Implementing: Matthew B.
-Testing: Jack C.</panel_attributes>
+Implementing: Matthew B., 
+Jack C., Jessan
+Testing: Alex</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -83,7 +84,7 @@ Testing: Jack C.</panel_attributes>
       <x>688</x>
       <y>400</y>
       <w>168</w>
-      <h>152</h>
+      <h>160</h>
     </coordinates>
     <panel_attributes>MapView (package private)
 --
@@ -97,17 +98,18 @@ Testing: Jack C.</panel_attributes>
 * View that renders the 
 game world
 --
-Implementing: Matthew B.
-Testing: Jack C.</panel_attributes>
+Implementing: Matthew B.,
+Jessan
+Testing: Alex</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>888</x>
+      <x>880</x>
       <y>400</y>
       <w>216</w>
-      <h>152</h>
+      <h>160</h>
     </coordinates>
     <panel_attributes>AvatarCreationView (package private)
 --
@@ -119,8 +121,8 @@ Testing: Jack C.</panel_attributes>
 *Rationale*
 * View that renders the creation screen
 --
-Implementing: Matthew B.
-Testing: Jack C.</panel_attributes>
+Implementing: Matthew B., Jessan
+Testing: Alex</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -156,40 +158,8 @@ bg=orange</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>560</x>
-      <y>544</y>
-      <w>152</w>
-      <h>168</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-lt=&lt;&lt;&lt;&lt;-
-m1=1
-m2=1
-References Avatar
-(recieves ref from Display)</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>752</x>
-      <y>544</y>
+      <y>552</y>
       <w>160</w>
-      <h>168</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-lt=&lt;&lt;&lt;&lt;-
-m1=1
-m2=1
-References Map 
-(potentially via an interface)</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>952</x>
-      <y>544</y>
-      <w>152</w>
       <h>160</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
@@ -198,7 +168,39 @@ m1=1
 m2=1
 References Avatar
 (recieves ref from Display)</panel_attributes>
+    <additional_attributes>20.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>752</x>
+      <y>552</y>
+      <w>160</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+References Map 
+(potentially via an interface)</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>944</x>
+      <y>552</y>
+      <w>160</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+References Avatar
+(recieves ref from Display)</panel_attributes>
+    <additional_attributes>10.0;10.0;20.0;170.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -233,13 +235,13 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>568</x>
+      <x>576</x>
       <y>312</y>
-      <w>96</w>
+      <w>88</w>
       <h>104</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>100.0;10.0;10.0;110.0</additional_attributes>
+    <additional_attributes>90.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -257,10 +259,10 @@ m2=1
     <coordinates>
       <x>808</x>
       <y>312</y>
-      <w>200</w>
+      <w>192</w>
       <h>104</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;230.0;110.0</additional_attributes>
+    <additional_attributes>10.0;10.0;220.0;110.0</additional_attributes>
   </element>
 </diagram>
