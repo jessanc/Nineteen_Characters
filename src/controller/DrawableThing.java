@@ -2,7 +2,6 @@ package src.controller;
 
 import java.io.Serializable;
 import src.model.MapDrawableThing_Association;
-import src.model.MapTile;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,8 +14,8 @@ import src.model.MapTile;
  */
 abstract public class DrawableThing implements Serializable {
 
-    // Converts the class name into a base 35 number
-    private static final long serialVersionUID = Long.parseLong("DrawableThing", 35);
+    // Converts the class name into a base 35 number. "DrawableThing" too long
+    private static final long serialVersionUID = Long.parseLong("Drawable", 35);
 
     // names of items and terrain should be non-unique.
     // names of entities should be unique to fit in a hashmap.
@@ -65,15 +64,6 @@ abstract public class DrawableThing implements Serializable {
     
     public boolean getViewable() {
         return this.is_viewable_;
-    }
-    
-    public MapTile getMyTile()
-    {
-        return null;
-    }
-
-    public void setMyTile(MapTile other)
-    {
     }
 
     //area effects

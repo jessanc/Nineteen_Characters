@@ -12,7 +12,9 @@ import src.model.MapAvatar_Association;
  */
 public final class AvatarController
 {
-    // my avatar
-    private final Avatar avatar_reference_ = MapAvatar_Association.getAvatarByName("avatar");
+    private final Avatar my_avatar_;
+    AvatarController(Avatar avatar) {
+        my_avatar_ = avatar;
+    }
     
 }

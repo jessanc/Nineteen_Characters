@@ -14,12 +14,15 @@ import src.controller.Occupation;
  */
 public class MapAvatar_Association extends MapEntity_Association {
 
+    private final Avatar avatar_;
+
     public MapAvatar_Association(Avatar avatar,
             int x_respawn_point, int y_respawn_point) {
         super(avatar, x_respawn_point, y_respawn_point);
+        avatar_ = avatar;
     }
 
-    public static Avatar getAvatarByName(String name) {
-        return src.model.Map.getAvatar(name);
+    public Avatar getAvatar() {
+        return avatar_;
     }
 }

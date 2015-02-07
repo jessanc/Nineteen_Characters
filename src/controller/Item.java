@@ -6,7 +6,6 @@
 package src.controller;
 
 import src.model.MapItem_Association;
-import src.model.MapTile;
 
 /**
  * Class item represents a stackable entity [Alex's definition of entity] that
@@ -32,6 +31,10 @@ public class Item extends DrawableThing {
         map_relationship_ = new MapItem_Association(
                 this, goes_in_inventory, is_one_shot);
     }
+    
+    public boolean isPassable() {
+        return this.is_passable_;
+    }
 
     public void onWalkOver() {
 
@@ -53,13 +56,6 @@ public class Item extends DrawableThing {
      */
     public void use(Item target) {
 
-    }
-
-    public MapTile getMyTile() {
-        return null;
-    }
-
-    public void setMyTile(MapTile other) {
     }
 
     boolean determineIfCanPass(Entity entity) {
