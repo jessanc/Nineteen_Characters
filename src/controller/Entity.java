@@ -19,9 +19,9 @@ abstract public class Entity extends DrawableThing {
     private final MapEntity_Association map_relationship_;
     
     public Entity(String name, char representation, 
-            int x, int y) {
+            int x_respawn_point, int y_respawn_point) {
         super(name, representation);
-        map_relationship_ = new MapEntity_Association( this, x, y );
+        map_relationship_ = new MapEntity_Association( this, x_respawn_point, y_respawn_point );
     }
 
     Item inventory_[];

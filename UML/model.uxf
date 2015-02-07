@@ -208,13 +208,13 @@ See Controller UML</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
+      <x>456</x>
       <y>216</y>
-      <w>144</w>
+      <w>152</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>160.0;10.0;10.0;80.0</additional_attributes>
+    <additional_attributes>170.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -371,9 +371,9 @@ Testing: John-Micheal Olsen</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>208</x>
+      <x>160</x>
       <y>8</y>
-      <w>936</w>
+      <w>984</w>
       <h>792</h>
     </coordinates>
     <panel_attributes>Model
@@ -519,5 +519,43 @@ Testing: John-Micheal Olsen</panel_attributes>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>168</x>
+      <y>72</y>
+      <w>264</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>MapMain_Association
+--
+
+--
+addAvatar
+addEntity
+removeAvatar
+removeEntity
+addItem 
+removeTopItem
+initializeTerrain
+--
+Responsibilities
+* Inserts entities, items,
+terrains, and avatars into the map.
+* Removes entites from the map
+Implementor: John-Michael Reed</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>344</x>
+      <y>272</y>
+      <w>200</w>
+      <h>304</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>230.0;360.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>

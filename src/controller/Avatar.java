@@ -5,6 +5,7 @@
  */
 package src.controller;
 
+import src.model.MapAvatar_Association;
 import src.view.Display;
 
 /**
@@ -18,8 +19,12 @@ public final class Avatar extends Entity {
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("Avatar", 35);
 
-    public Avatar(String name, char representation, int x, int y) {
-        super(name, representation, x, y);
+    // map_relationship_ is used in place of a map_referance_
+    private final MapAvatar_Association map_relationship_;
+
+    public Avatar(String name, char representation, int x_respawn_point, int y_respawn_point) {
+        super(name, representation, x_respawn_point, y_respawn_point);
+        map_relationship_ = new MapAvatar_Association(this, x_respawn_point, y_respawn_point);
     }
 
     private final Display display_ = new Display(this);
