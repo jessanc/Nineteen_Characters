@@ -505,6 +505,8 @@ m2=1</panel_attributes>
     <panel_attributes>AvatarController
 --
 - avatar_ :Avatar
+- statsView_ : bool
+- ccView_ : bool
 --
 + handleAttack(:2DVector)
 + handleInteract(:2DVector)
