@@ -10,7 +10,7 @@ import src.controller.Avatar;
 import src.controller.Entity;
 /**
  * Players see the StatsView when they are checking their stats
- * @author JohnReedLOL
+ * @author Matthew B, Jessan, Jack C,JohnReedLOL
  */
 final class StatsView extends Viewport
 {

@@ -1,6 +1,10 @@
 package src.view;
 import java.io.Serializable;
 
+/**
+ * Abstract view class that the views inherit from.
+ * @author Matthew B, JohnReedLOL
+ */
 abstract class Viewport implements Serializable {
 
     // Converts the class name into a base 35 number
