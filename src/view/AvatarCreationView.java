@@ -10,7 +10,7 @@ import src.controller.Avatar;
 import src.controller.Entity;
 /**
  * Players see the AvatarCreationView when they chose their occupation.
- * @author JohnReedLOL
+ * @author Matthew B, Jessan, JohnReedLOL
  */
 final class AvatarCreationView extends Viewport
 {

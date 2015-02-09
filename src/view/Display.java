@@ -11,7 +11,7 @@ import src.controller.Avatar;
 import src.model.MapDisplay_Association;
 /**
  * Represents a single player's display
- * @author JohnReedLOL
+ * @author Matthew B, JohnReedLOL
  */
 public class Display implements Serializable
 {

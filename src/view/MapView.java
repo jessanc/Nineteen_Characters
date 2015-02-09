@@ -10,7 +10,7 @@ import src.model.MapDisplay_Association;
 /**
  * Players see the MapView while they are interacting with the map
  *
- * @author JohnReedLOL
+ * @author Matthew B, Jessan, JohnReedLOL
  */
 
 final class MapView extends Viewport {
