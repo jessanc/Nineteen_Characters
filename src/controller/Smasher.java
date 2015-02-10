@@ -10,9 +10,13 @@ package src.controller;
  *
  * @author JohnReedLOL
  */
-public final class Smasher extends Occupation
+public final class Smasher implements Occupation
 {
     // Converts the class name into a base 35 number
     private static final long serialVersionUID = Long.parseLong("Smasher", 35);
+    private StatsPack stats;
+    public void defaultStats(){
+        stats = new StatsPack();
+    }
     
 }
